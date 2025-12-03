@@ -145,16 +145,15 @@ class Game:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
-                if event.type == pygame.KEYDOWN:
-                    if event.key == pygame.K_SPACE and self.has_bullet:
-                        bullet = Bullet(self.paddle.rect.centerx, self.paddle.rect.top)
-                        self.bullets.add(bullet)
-                        self.all_sprites.add(bullet)
-                        self.has_bullet = False
+
+            # 키 상태 미리 가져오기 (아이템 획득과 같은 프레임에 발사 처리 가능하도록)
+            keys = pygame.key.get_pressed()
 
             # 업데이트
             self.all_sprites.update()
-            if not self.ball.update():
+            # 중복으로 ball.update() 호출하지 않음
+            # 공이 화면 아래로 나가면 종료
+            if self.ball.rect.bottom >= HEIGHT:
                 running = False
 
             # 패들과 공 충돌
@@ -178,8 +177,16 @@ class Game:
             if hit_items:
                 self.has_bullet = True
 
+            # 키 입력(스페이스)로 발사 — 아이템을 먹은 직후 같은 프레임에서도 동작하도록 keys 사용
+            if keys[pygame.K_SPACE] and self.has_bullet:
+                # 패들 바로 위에서 발사
+                bullet = Bullet(self.paddle.rect.centerx, self.paddle.rect.top - 1)
+                self.bullets.add(bullet)
+                self.all_sprites.add(bullet)
+                self.has_bullet = False
+
             # 총알과 블록 충돌
-            for bullet in self.bullets:
+            for bullet in list(self.bullets):
                 hit_blocks = pygame.sprite.spritecollide(bullet, self.blocks, True)
                 if hit_blocks:
                     bullet.kill()

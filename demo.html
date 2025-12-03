@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 & CSS3 데모 웹페이지</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            animation: slideDown 0.6s ease-out;
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        nav button {
+            padding: 10px 20px;
+            border: none;
+            background: #667eea;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+
+        nav button:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        /* HTML5 Semantic Elements */
+        article {
+            background: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #667eea;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        article h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        /* CSS3 Flexbox */
+        .flex-container {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .flex-item {
+            flex: 1;
+            min-width: 80px;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* CSS3 Grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .grid-item {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* CSS3 Animations */
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .animated-box {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 10px;
+            margin: 20px auto;
+            animation: rotate 4s linear infinite;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .pulse-box {
+            width: 100px;
+            height: 100px;
+            background: #f5576c;
+            border-radius: 50%;
+            margin: 20px auto;
+            animation: pulse 1s ease-in-out infinite;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* CSS3 Transforms & Transitions */
+        .transform-box {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            border-radius: 10px;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .transform-box:hover {
+            transform: scale(1.2) rotate(5deg);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* CSS3 Gradients */
+        .gradient-box {
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .gradient-linear {
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+        }
+
+        .gradient-radial {
+            background: radial-gradient(circle, #667eea, #764ba2);
+        }
+
+        /* Video & Audio */
+        audio, video {
+            width: 100%;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        /* Form Styles */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea, select {
+            padding: 10px;
+            border: 2px solid #667eea;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #764ba2;
+            box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            main {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎨 HTML5 & CSS3 데모 웹페이지</h1>
+        <p>HTML5의 시맨틱 요소와 CSS3의 다양한 기능을 학습하세요!</p>
+        <nav>
+            <button onclick="scrollToSection('semantic')">시맨틱 요소</button>
+            <button onclick="scrollToSection('layout')">레이아웃</button>
+            <button onclick="scrollToSection('animations')">애니메이션</button>
+            <button onclick="scrollToSection('transforms')">변형</button>
+            <button onclick="scrollToSection('forms')">폼 요소</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HTML5 Semantic Elements -->
+        <section id="semantic">
+            <h2>📝 HTML5 시맨틱 요소</h2>
+            <article>
+                <h3>&lt;header&gt; 요소</h3>
+                <p>페이지나 섹션의 헤더를 정의합니다.</p>
+            </article>
+            <article>
+                <h3>&lt;nav&gt; 요소</h3>
+                <p>네비게이션 링크를 포함합니다.</p>
+            </article>
+            <article>
+                <h3>&lt;article&gt; 요소</h3>
+                <p>독립적인 콘텐츠를 정의합니다.</p>
+            </article>
+            <article>
+                <h3>&lt;section&gt; 요소</h3>
+                <p>문서의 일반적인 섹션을 정의합니다.</p>
+            </article>
+            <article>
+                <h3>&lt;footer&gt; 요소</h3>
+                <p>페이지나 섹션의 푸터를 정의합니다.</p>
+            </article>
+        </section>
+
+        <!-- CSS3 Flexbox Layout -->
+        <section id="layout">
+            <h2>📐 CSS3 레이아웃</h2>
+            <h3>Flexbox 예제</h3>
+            <div class="flex-container">
+                <div class="flex-item">Item 1</div>
+                <div class="flex-item">Item 2</div>
+                <div class="flex-item">Item 3</div>
+                <div class="flex-item">Item 4</div>
+            </div>
+
+            <h3>Grid 예제</h3>
+            <div class="grid-container">
+                <div class="grid-item">Grid 1</div>
+                <div class="grid-item">Grid 2</div>
+                <div class="grid-item">Grid 3</div>
+                <div class="grid-item">Grid 4</div>
+            </div>
+        </section>
+
+        <!-- CSS3 Animations -->
+        <section id="animations">
+            <h2>✨ CSS3 애니메이션</h2>
+            <p>마우스를 요소 위에 올려보세요!</p>
+            <div class="animated-box">회전</div>
+            <div class="pulse-box">펄스</div>
+            <h3>Gradient 예제</h3>
+            <div class="gradient-box gradient-linear">선형 그래디언트</div>
+            <div class="gradient-box gradient-radial">방사형 그래디언트</div>
+        </section>
+
+        <!-- CSS3 Transforms -->
+        <section id="transforms">
+            <h2>🔄 CSS3 변형 & 전환</h2>
+            <p>아래 박스에 마우스를 올려보세요!</p>
+            <div class="transform-box">Hover Me!</div>
+        </section>
+
+        <!-- Forms -->
+        <section id="forms">
+            <h2>📋 HTML5 폼 요소</h2>
+            <form onsubmit="handleSubmit(event)">
+                <input type="text" placeholder="이름을 입력하세요" required>
+                <input type="email" placeholder="이메일을 입력하세요" required>
+                <input type="number" placeholder="나이를 입력하세요" min="0" max="120">
+                <input type="date">
+                <select required>
+                    <option value="">선택하세요</option>
+                    <option value="html">HTML5</option>
+                    <option value="css">CSS3</option>
+                    <option value="js">JavaScript</option>
+                </select>
+                <textarea placeholder="메시지를 입력하세요" rows="4"></textarea>
+                <button type="submit">제출</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HTML5 & CSS3 데모 웹페이지 | 학습 목적으로 제작됨</p>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('폼이 제출되었습니다! 개발자 도구를 확인하세요.');
+            console.log('폼 제출:', new FormData(event.target));
+        }
+    </script>
+</body>
+</html>
