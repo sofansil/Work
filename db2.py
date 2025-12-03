@@ -1,12 +1,13 @@
-# db1.py
+# db2.py
 import sqlite3
 
 # 연결객체 생성
-con = sqlite3.connect(":memory:")
+# raw string 처리: r"경로명"
+con = sqlite3.connect(r"c:\work\sampleDB.db")
 # 커서객체 생성
 cur = con.cursor()
 # 테이블 생성
-cur.execute("CREATE TABLE PhoneBook (name text, phoneNum text);")
+cur.execute("CREATE TABLE IF NOT EXISTS PhoneBook (name text, phoneNum text);")
 # 데이터 삽입
 cur.execute("INSERT INTO PhoneBook VALUES ('윤석우', '010-2782-6901');")
 cur.execute("INSERT INTO PhoneBook VALUES ('김신실', '010-5455-6176');")
@@ -21,16 +22,11 @@ datalist = (("윤지예", "010-6570-6176"),("윤은노","010-8662-2174"))
 cur.executemany("INSERT INTO PhoneBook VALUES (?, ?);", datalist)
 
 # 데이터 조회
-# cur.execute("SELECT * FROM PhoneBook")
-# for row in cur:
-#     print(row)
+# 블럭처리: ctrl + /
 cur.execute("SELECT * FROM PhoneBook")
-print(" ---- fetchone() ----")
-print(cur.fetchone())   # 한 행씩 가져오기
-print(" ---- fetchmany(2) ----")
-print(cur.fetchmany(2)) # 지정한 개수만큼 가져오기
-# cur.execute("SELECT * FROM PhoneBook")
-print(" ---- fetchall() ----")
-print(cur.fetchall())    # 남은 모든 행 가져오기
+for row in cur:
+    print(row)
 
+# 커밋: 변경내용 저장
+con.commit()
 
