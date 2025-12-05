@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
+    <width>580</width>
     <height>596</height>
    </rect>
   </property>
@@ -74,7 +74,7 @@
    <widget class="QLineEdit" name="prodID">
     <property name="geometry">
      <rect>
-      <x>140</x>
+      <x>150</x>
       <y>40</y>
       <width>71</width>
       <height>31</height>
@@ -84,7 +84,7 @@
    <widget class="QLineEdit" name="prodName">
     <property name="geometry">
      <rect>
-      <x>140</x>
+      <x>150</x>
       <y>90</y>
       <width>111</width>
       <height>31</height>
@@ -94,7 +94,7 @@
    <widget class="QLineEdit" name="prodPrice">
     <property name="geometry">
      <rect>
-      <x>140</x>
+      <x>150</x>
       <y>140</y>
       <width>111</width>
       <height>31</height>
@@ -198,8 +198,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>600</width>
-     <height>21</height>
+     <width>580</width>
+     <height>22</height>
     </rect>
    </property>
   </widget>

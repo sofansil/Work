@@ -15,13 +15,18 @@ class Form(QMainWindow):
         self.setGeometry(200, 200, 800, 800)
         
         #입력 텍스트 
-        self.lineEdit = QLineEdit("", self)
+        self.lineEdit = QLineEdit("아이폰", self)
         self.lineEdit.move(20, 20)
 
         #버튼
         self.btn = QPushButton("검색", self)
-        self.btn.move(120, 20)
+        self.btn.move(130, 20)
         self.btn.clicked.connect(self.setTableWidgetData)
+
+        #닫기 버튼
+        self.btn1 = QPushButton("닫기", self)
+        self.btn1.move(250, 20)
+        self.btn1.clicked.connect(QApplication.instance().quit)
 
         self.tableWidget = QTableWidget(self)
         self.tableWidget.move(20, 70)
@@ -34,6 +39,11 @@ class Form(QMainWindow):
         
         #self.setTableWidgetData()
         self.tableWidget.doubleClicked.connect(self.doubleClicked)
+    
+    # def setupUI(self):
+    #     self.btn1 = QPushButton("닫기", self)
+    #     self.btn1.move(150, 20)
+    #     self.btn1.clicked.connect(QApplication.instance().quit)
 
     def setTableWidgetData(self):
         row = 0
