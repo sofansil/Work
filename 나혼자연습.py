@@ -1,8 +1,9 @@
 # 나혼자연습.py
+def setValue(newValue):
+    # 지역변수
+    x = newValue
+    print("지역변수 x:", x)
 
-lst = [1, 2, 3, 4, 5]  
-print(type(lst))  # 리스트의 타입 출력
-print(len(lst))   # 리스트의 길이 출력
-print(lst)  # 리스트 내용 출력
-
-
+setValue(10)
+x=20
+print("전역변수 x:", x)
