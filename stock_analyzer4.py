@@ -4,6 +4,7 @@ import socket
 from pykrx import stock
 import FinanceDataReader as fdr
 import pandas as pd
+import numpy as np
 from datetime import datetime, timedelta
 from telegram import Bot
 import asyncio
@@ -14,6 +15,7 @@ import threading
 import requests
 from bs4 import BeautifulSoup
 import sqlite3
+from typing import Dict, Tuple, Optional
 
 # 환경변수 로드
 load_dotenv()
@@ -1654,6 +1656,285 @@ def screen_surge_stocks(max_workers=10):
     return results_A + results_B + results_C, []
 
 
+# ==================== 피보나치 분석 (Guru 원칙) ====================
+
+def compute_fibonacci_levels(low_swing: float, high_swing: float) -> Dict[str, float]:
+    """
+    피보나치 레벨 계산
+    
+    Args:
+        low_swing: 스윙 저점 가격
+        high_swing: 스윙 고점 가격
+    
+    Returns:
+        피보나치 레벨 딕셔너리 (0%, 23.6%, 38.2%, 50%, 61.8%, 100%, 161.8%, 261.8%)
+    """
+    diff = high_swing - low_swing
+    
+    levels = {
+        "0.0": low_swing,
+        "23.6": low_swing + diff * 0.236,
+        "38.2": low_swing + diff * 0.382,
+        "50.0": low_swing + diff * 0.5,
+        "61.8": low_swing + diff * 0.618,
+        "100.0": high_swing,
+        "161.8": low_swing + diff * 1.618,
+        "261.8": low_swing + diff * 2.618,
+    }
+    
+    return levels
+
+
+def detect_swing(df: pd.DataFrame, lookback: int = 30) -> Tuple[float, float, int, int]:
+    """
+    스윙 저점/고점 탐색
+    
+    Args:
+        df: OHLCV 데이터프레임 (컬럼: 시가, 고가, 저가, 종가)
+        lookback: 탐색 기간 (일)
+    
+    Returns:
+        (low_swing, high_swing, low_idx, high_idx)
+    """
+    if len(df) < lookback:
+        lookback = len(df)
+    
+    recent = df.tail(lookback).copy()
+    recent = recent.reset_index(drop=True)
+    
+    # 저가 컬럼 확인 (pykrx: 저가, 일반: Low)
+    low_col = '저가' if '저가' in recent.columns else 'Low'
+    high_col = '고가' if '고가' in recent.columns else 'High'
+    
+    # 최저점 찾기
+    low_idx = recent[low_col].idxmin()
+    low_swing = recent[low_col].iloc[low_idx]
+    
+    # 최저점 이후 구간에서 최고점 찾기
+    if low_idx < len(recent) - 1:
+        after_low = recent.iloc[low_idx + 1:]
+        if len(after_low) > 0:
+            high_idx_rel = after_low[high_col].idxmax()
+            high_swing = after_low[high_col].iloc[high_idx_rel - low_idx - 1] if high_idx_rel > low_idx else recent[high_col].max()
+            high_idx = high_idx_rel
+        else:
+            high_idx = recent[high_col].idxmax()
+            high_swing = recent[high_col].iloc[high_idx]
+    else:
+        high_idx = recent[high_col].idxmax()
+        high_swing = recent[high_col].iloc[high_idx]
+    
+    # 저점이 고점보다 높으면 스왑
+    if low_swing > high_swing:
+        low_swing, high_swing = high_swing, low_swing
+        low_idx, high_idx = high_idx, low_idx
+    
+    return low_swing, high_swing, low_idx, high_idx
+
+
+def classify_guru_fibo_state(close: float, levels: Dict[str, float]) -> str:
+    """
+    가격 상태 분류 (Guru Principles + Fibonacci)
+    
+    Returns:
+        상태 코드: INIT_UP, HEALTHY_PULLBACK, WARNING_50, DEEP_PULLBACK,
+                  BREAKDOWN_618, CONSOLIDATION, ABOVE_100, TARGET_1618, TARGET_2618
+    """
+    l_0 = levels["0.0"]
+    l_236 = levels["23.6"]
+    l_382 = levels["38.2"]
+    l_50 = levels["50.0"]
+    l_618 = levels["61.8"]
+    l_100 = levels["100.0"]
+    l_1618 = levels["161.8"]
+    l_2618 = levels["261.8"]
+    
+    if close >= l_2618:
+        return "TARGET_2618"
+    elif close >= l_1618:
+        return "TARGET_1618"
+    elif close >= l_100:
+        return "ABOVE_100"
+    elif close >= l_618:
+        return "CONSOLIDATION"
+    elif close >= l_50:
+        return "DEEP_PULLBACK"
+    elif close >= l_382:
+        return "WARNING_50"
+    elif close >= l_236:
+        return "HEALTHY_PULLBACK"
+    elif close >= l_0:
+        return "INIT_UP"
+    else:
+        return "BREAKDOWN_618"
+
+
+def generate_guru_signals(close: float, levels: Dict[str, float]) -> Dict[str, bool]:
+    """
+    매매 시그널 생성 (익절/손절/재진입)
+    
+    Returns:
+        시그널 딕셔너리
+    """
+    l_236 = levels["23.6"]
+    l_382 = levels["38.2"]
+    l_50 = levels["50.0"]
+    l_618 = levels["61.8"]
+    l_100 = levels["100.0"]
+    l_1618 = levels["161.8"]
+    l_2618 = levels["261.8"]
+    
+    signals = {
+        "stop_loss": close < l_618,
+        "take_profit_1": close >= l_1618,
+        "take_profit_2": close >= l_2618,
+        "pullback_buy_zone": l_236 <= close < l_382,
+        "deep_pullback_zone": l_50 <= close < l_618,
+        "reentry_breakout": close >= l_100,
+    }
+    
+    return signals
+
+
+def analyze_guru_fibo(df: pd.DataFrame, lookback: int = 30) -> Optional[Dict]:
+    """
+    통합 분석 함수 - Guru 원칙 + 피보나치 분석
+    
+    Args:
+        df: OHLCV 데이터프레임
+        lookback: 스윙 탐색 기간 (일)
+    
+    Returns:
+        분석 결과 딕셔너리
+    """
+    if df is None or len(df) < 5:
+        return None
+    
+    close_col = '종가' if '종가' in df.columns else 'Close'
+    close = df[close_col].iloc[-1]
+    
+    low_swing, high_swing, low_idx, high_idx = detect_swing(df, lookback)
+    levels = compute_fibonacci_levels(low_swing, high_swing)
+    state = classify_guru_fibo_state(close, levels)
+    signals = generate_guru_signals(close, levels)
+    
+    state_descriptions = {
+        "INIT_UP": "초기 상승 구간 (0~23.6%)",
+        "HEALTHY_PULLBACK": "건강한 눌림목 (23.6~38.2%) - 매수 고려",
+        "WARNING_50": "주의 구간 (38.2~50%) - 신중한 접근",
+        "DEEP_PULLBACK": "깊은 조정 (50~61.8%) - 반등 또는 추세 전환",
+        "BREAKDOWN_618": "⚠️ 추세 붕괴 (61.8% 이탈) - 손절 권고",
+        "CONSOLIDATION": "횡보/재상승 시도 (61.8~100%)",
+        "ABOVE_100": "🚀 시세 진행 중 (100% 돌파)",
+        "TARGET_1618": "🎯 1차 목표가 도달 (161.8%) - 부분 익절 고려",
+        "TARGET_2618": "🎯 2차 목표가 도달 (261.8%) - 익절 권고",
+    }
+    
+    return {
+        "low_swing": low_swing,
+        "high_swing": high_swing,
+        "close": close,
+        "levels": levels,
+        "state": state,
+        "state_desc": state_descriptions.get(state, "Unknown"),
+        "signals": signals,
+    }
+
+
+def format_guru_analysis_short(result: Dict, stock_name: str = "", stock_code: str = "") -> str:
+    """
+    분석 결과를 짧은 텔레그램 메시지로 포맷 (여러 종목용)
+    """
+    if result is None:
+        return f"❌ {stock_name}({stock_code}) 분석 실패"
+    
+    levels = result["levels"]
+    state = result["state"]
+    
+    # 상태를 직관적인 한글 + 이모지로 변환
+    state_short = {
+        "INIT_UP": "📈초기상승",
+        "HEALTHY_PULLBACK": "📉눌림목",
+        "WARNING_50": "⚠️주의",
+        "DEEP_PULLBACK": "📉깊은조정",
+        "BREAKDOWN_618": "🔴추세붕괴",
+        "CONSOLIDATION": "➡️횡보",
+        "ABOVE_100": "🚀돌파진행",
+        "TARGET_1618": "🎯1차목표",
+        "TARGET_2618": "💰2차목표",
+    }.get(state, state)
+    
+    return f"• {stock_name}({stock_code}) {result['close']:,.0f}원\n  {state_short} (손절:{levels['61.8']:,.0f} 목표:{levels['161.8']:,.0f})"
+
+
+def analyze_followup_strategy(results: list) -> str:
+    """
+    포착된 종목들의 후속 관리 전략 메시지 생성
+    
+    Args:
+        results: screen_surge_stocks()의 결과 리스트
+    
+    Returns:
+        텔레그램 메시지
+    """
+    if not results:
+        return "❌ 분석할 종목이 없습니다."
+    
+    # A/B/C 분류
+    results_A = [r for r in results if r.get('class') == 'A']
+    results_B = [r for r in results if r.get('class') == 'B']
+    results_C = [r for r in results if r.get('class') == 'C']
+    
+    lines = []
+    lines.append(f"📊 [후속 관리 전략] {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+    lines.append("")
+    
+    def analyze_stocks(stock_list, grade_emoji, grade_name):
+        """종목 리스트 분석"""
+        if not stock_list:
+            return []
+        
+        section_lines = []
+        section_lines.append(f"{grade_emoji} {grade_name} ({len(stock_list)}종목)")
+        
+        for r in stock_list[:10]:  # 최대 10개
+            ticker = r.get('종목코드', '')
+            name = r.get('종목명', '')
+            
+            # 종목 데이터 가져오기
+            df = fetch_stock_data(ticker, days=60)
+            if df is None or len(df) < 10:
+                section_lines.append(f"• {name}({ticker}) - 데이터 부족")
+                continue
+            
+            # 피보나치 분석
+            fibo_result = analyze_guru_fibo(df, lookback=30)
+            if fibo_result:
+                short_msg = format_guru_analysis_short(fibo_result, name, ticker)
+                section_lines.append(short_msg)
+            else:
+                section_lines.append(f"• {name}({ticker}) - 분석 실패")
+        
+        if len(stock_list) > 10:
+            section_lines.append(f"... 외 {len(stock_list) - 10}개")
+        
+        section_lines.append("")
+        return section_lines
+    
+    # A급 분석
+    lines.extend(analyze_stocks(results_A, "🔥", "A급"))
+    
+    # B급 분석
+    lines.extend(analyze_stocks(results_B, "⚡", "B급"))
+    
+    # C급은 요약만
+    if results_C:
+        lines.append(f"👀 C급 ({len(results_C)}종목) - 상세 분석 생략")
+        lines.append("")
+    
+    return "\n".join(lines)
+
+
 def show_menu():
     """메뉴 표시"""
     print("\n" + "="*50)
@@ -1897,6 +2178,36 @@ if __name__ == "__main__":
                     # DB에도 저장
                     save_surge_results_to_db(results)
                     print(f"[DB 저장] stock_history.db에 저장 완료")
+                
+                # ✅ 후속 관리 전략 생성 (Y/N)
+                if results:
+                    print("\n" + "="*70)
+                    followup_choice = input("[입력] 후속 관리 전략 생성? (Y/N, 기본값: N): ").strip().upper()
+                    
+                    if followup_choice == 'Y':
+                        print("\n[분석] 피보나치 기반 후속 관리 전략 생성 중...")
+                        
+                        # A/B급만 분석 (C급은 너무 많음)
+                        analysis_targets = results_A + results_B
+                        
+                        if not analysis_targets:
+                            print("[알림] A/B급 종목이 없어 후속 관리 분석을 건너뜁니다.")
+                        else:
+                            followup_msg = analyze_followup_strategy(analysis_targets)
+                            
+                            print("\n" + "="*70)
+                            print("[후속 관리 전략 미리보기]")
+                            print("="*70)
+                            print(followup_msg)
+                            
+                            print(f"\n[전송] 텔레그램으로 전송 중... (길이: {len(followup_msg)}자)")
+                            if send_telegram_message_sync(followup_msg):
+                                print("[OK] 후속 관리 전략 전송 완료!")
+                            else:
+                                print("[오류] 후속 관리 전략 전송 실패")
+                    else:
+                        print("[알림] 후속 관리 전략 생성을 건너뜁니다.")
+                        
             elif choice == "4":
                 graceful_exit()
             else:

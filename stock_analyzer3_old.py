@@ -21,13 +21,6 @@ load_dotenv()
 # 네트워크 기본 타임아웃 (초) - 모든 소켓 요청에 적용
 socket.setdefaulttimeout(10)
 
-# requests 라이브러리에 기본 타임아웃 강제 적용 (pykrx 내부 호출 포함)
-_original_request = requests.Session.request
-def _patched_request(self, *args, **kwargs):
-    kwargs.setdefault('timeout', 10)
-    return _original_request(self, *args, **kwargs)
-requests.Session.request = _patched_request
-
 # 설정
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN", "YOUR_BOT_TOKEN")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "YOUR_CHAT_ID")
@@ -272,7 +265,7 @@ def save_watchlist(watchlist):
 
 
 def save_surge_results_to_db(results):
-    """급등주 스크리닝 결과를 DB에 저장 (배치 처리 최적화)"""
+    """급등주 스크리닝 결과를 DB에 저장 (surge_screening_results + stock_history + daily_records)"""
     if not results:
         return
     
@@ -283,138 +276,119 @@ def save_surge_results_to_db(results):
         now = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         screening_date = datetime.now().strftime('%Y-%m-%d')
         
-        # 1. 기존 데이터 한 번에 조회 (성능 최적화)
-        # 중복 종목코드 제거 (안전성 확보)
-        codes = list(set(r.get('종목코드', '') for r in results if r.get('종목코드')))
-        if not codes:
-            print("[DB 저장] 저장할 종목코드가 없습니다.")
-            return
-        placeholders = ','.join('?' * len(codes))
-        
-        # surge_screening_results 기존 데이터 조회
-        cursor.execute(f'''
-            SELECT 종목코드 FROM surge_screening_results 
-            WHERE 종목코드 IN ({placeholders}) AND 스크리닝날짜 = ?
-        ''', codes + [screening_date])
-        existing_surge = set(row[0] for row in cursor.fetchall())
-        
-        # stock_history 기존 데이터 조회
-        cursor.execute(f'''
-            SELECT 종목코드, 최종발견일, 발견횟수, 연속발견횟수, 최대상승률, 최대가격 
-            FROM stock_history WHERE 종목코드 IN ({placeholders})
-        ''', codes)
-        existing_history = {row[0]: {'last_found': row[1], 'count': row[2], 'consecutive': row[3], 'max_rate': row[4], 'max_price': row[5]} 
-                           for row in cursor.fetchall()}
-        
-        # 2. 배치 데이터 준비
-        surge_data = []
-        history_update_data = []
-        history_insert_data = []
-        daily_data = []
-        
+        success_count = 0
         new_count = 0
         update_count = 0
         
         for r in results:
-            code = r.get('종목코드', '')
-            
-            # 신규/기존 구분
-            status = 'old' if code in existing_surge else 'new'
-            if status == 'new':
-                new_count += 1
-            else:
-                update_count += 1
-            
-            # surge_screening_results 데이터
-            surge_data.append((
-                code,
-                r.get('종목명', ''),
-                r.get('시장', ''),
-                r.get('class', ''),
-                r.get('score', 0),
-                r.get('현재가', 0),
-                r.get('today_return', 0.0),
-                r.get('이유', ''),
-                r.get('mode', ''),
-                screening_date,
-                screening_date + ' ' + now.split()[1],
-                now,
-                status
-            ))
-            
-            # stock_history 데이터 준비
-            theme_name = f"급등주_{r.get('class', '')}급"
-            today_return = r.get('today_return', 0.0)
-            current_price = r.get('현재가', 0)
-            stock_name = r.get('종목명', '')
-            
-            if code in existing_history:
-                hist = existing_history[code]
-                last_found = hist['last_found']
+            try:
+                code = r.get('종목코드', '')
                 
-                if last_found == screening_date:
-                    consecutive_count = hist['consecutive']
-                    total_count = hist['count']
-                elif last_found and (datetime.strptime(screening_date, '%Y-%m-%d') - datetime.strptime(last_found, '%Y-%m-%d')).days == 1:
-                    consecutive_count = hist['consecutive'] + 1
-                    total_count = hist['count'] + 1
+                # 1. surge_screening_results 테이블에 저장
+                # 기존 데이터 확인
+                cursor.execute('''
+                    SELECT id FROM surge_screening_results 
+                    WHERE 종목코드 = ? AND 스크리닝날짜 = ?
+                ''', (code, screening_date))
+                existing = cursor.fetchone()
+                
+                # 신규/기존 구분
+                status = 'old' if existing else 'new'
+                if status == 'new':
+                    new_count += 1
                 else:
-                    consecutive_count = 1
-                    total_count = hist['count'] + 1
+                    update_count += 1
                 
-                max_rate = max(hist['max_rate'] or 0, today_return)
-                max_price = max(hist['max_price'] or 0, current_price)
+                cursor.execute('''
+                    INSERT OR REPLACE INTO surge_screening_results 
+                    (종목코드, 종목명, 시장, class, score, 현재가, today_return, 이유, mode, 스크리닝날짜, 스크리닝일시, 생성일시, status)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ''', (
+                    code,
+                    r.get('종목명', ''),
+                    r.get('시장', ''),
+                    r.get('class', ''),
+                    r.get('score', 0),
+                    r.get('현재가', 0),
+                    r.get('today_return', 0.0),
+                    r.get('이유', ''),
+                    r.get('mode', ''),
+                    screening_date,
+                    screening_date + ' ' + now.split()[1],
+                    now,
+                    status
+                ))
                 
-                history_update_data.append((
-                    stock_name, theme_name, screening_date,
-                    total_count, consecutive_count, max_rate, max_price, now, code
-                ))
-            else:
-                history_insert_data.append((
-                    code, stock_name, theme_name,
-                    screening_date, screening_date, 1, 1, today_return,
-                    current_price, now, now
-                ))
-            
-            # daily_records 데이터
-            daily_data.append((
-                code, stock_name, theme_name,
-                screening_date, current_price, today_return, 0, now
-            ))
-        
-        # 3. 배치 INSERT/UPDATE 실행
-        cursor.executemany('''
-            INSERT OR REPLACE INTO surge_screening_results 
-            (종목코드, 종목명, 시장, class, score, 현재가, today_return, 이유, mode, 스크리닝날짜, 스크리닝일시, 생성일시, status)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        ''', surge_data)
-        
-        if history_update_data:
-            cursor.executemany('''
-                UPDATE stock_history
-                SET 종목명 = ?, 테마명 = ?, 최종발견일 = ?,
-                    발견횟수 = ?, 연속발견횟수 = ?,
-                    최대상승률 = ?, 최대가격 = ?, 수정일시 = ?
-                WHERE 종목코드 = ?
-            ''', history_update_data)
-        
-        if history_insert_data:
-            cursor.executemany('''
-                INSERT INTO stock_history
-                (종목코드, 종목명, 테마명, 최초발견일, 최종발견일,
-                 발견횟수, 연속발견횟수, 최대상승률, 최대가격, 생성일시, 수정일시)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-            ''', history_insert_data)
-        
-        cursor.executemany('''
-            INSERT INTO daily_records
-            (종목코드, 종목명, 테마명, 발견일, 현재가, 상승률, 거래량, 기록일시)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-        ''', daily_data)
+                # 2. stock_history 테이블에도 저장 (전체 이력 통계에 포함)
+                # 필수 데이터로 변환
+                stock_data = {
+                    '종목코드': code,
+                    '종목명': r.get('종목명', ''),
+                    '테마명': f"급등주_{r.get('class', '')}급",
+                    '현재가': r.get('현재가', 0),
+                    '상승률': r.get('today_return', 0.0),
+                    '거래량': 0  # 급등주 감지에서는 거래량 정보 없음
+                }
+                
+                # stock_history 업데이트 로직 (update_stock_history 참고)
+                cursor.execute('SELECT * FROM stock_history WHERE 종목코드 = ?', (code,))
+                existing_history = cursor.fetchone()
+                
+                if existing_history:
+                    # 기존 종목 업데이트
+                    col_names = [desc[0] for desc in cursor.description]
+                    existing_dict = dict(zip(col_names, existing_history))
+                    
+                    last_found = existing_dict['최종발견일']
+                    consecutive_count = existing_dict['연속발견횟수']
+                    
+                    if last_found == screening_date:
+                        consecutive_count = existing_dict['연속발견횟수']
+                    elif (datetime.strptime(screening_date, '%Y-%m-%d') - datetime.strptime(last_found, '%Y-%m-%d')).days == 1:
+                        consecutive_count = existing_dict['연속발견횟수'] + 1
+                    else:
+                        consecutive_count = 1
+                    
+                    total_count = existing_dict['발견횟수'] + (0 if last_found == screening_date else 1)
+                    max_rate = max(existing_dict['최대상승률'], stock_data['상승률'])
+                    max_price = max(existing_dict['최대가격'], stock_data['현재가'])
+                    
+                    cursor.execute('''
+                        UPDATE stock_history
+                        SET 종목명 = ?, 테마명 = ?, 최종발견일 = ?,
+                            발견횟수 = ?, 연속발견횟수 = ?,
+                            최대상승률 = ?, 최대가격 = ?, 수정일시 = ?
+                        WHERE 종목코드 = ?
+                    ''', (stock_data['종목명'], stock_data['테마명'], screening_date,
+                          total_count, consecutive_count, max_rate, max_price, now, code))
+                else:
+                    # 신규 종목 등록
+                    cursor.execute('''
+                        INSERT INTO stock_history
+                        (종목코드, 종목명, 테마명, 최초발견일, 최종발견일,
+                         발견횟수, 연속발견횟수, 최대상승률, 최대가격, 생성일시, 수정일시)
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    ''', (code, stock_data['종목명'], stock_data['테마명'],
+                          screening_date, screening_date, 1, 1, stock_data['상승률'],
+                          stock_data['현재가'], now, now))
+                
+                # 3. daily_records 테이블에도 저장 (일별 기록)
+                cursor.execute('''
+                    INSERT INTO daily_records
+                    (종목코드, 종목명, 테마명, 발견일, 현재가, 상승률, 거래량, 기록일시)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                ''', (code, stock_data['종목명'], stock_data['테마명'],
+                      screening_date, stock_data['현재가'], stock_data['상승률'],
+                      stock_data['거래량'], now))
+                
+                success_count += 1
+            except Exception as e:
+                print(f"[DB 저장 오류] {r.get('종목코드', '')}: {e}")
+                continue
         
         conn.commit()
         conn.close()
-        print(f"[DB 저장] {len(results)}개 종목 저장 (신규: {new_count}, 업데이트: {update_count})")
+        print(f"[DB 저장] {success_count}/{len(results)}개 종목 저장 (신규: {new_count}, 업데이트: {update_count})")
         print(f"  ✓ surge_screening_results 테이블")
         print(f"  ✓ stock_history 테이블")
         print(f"  ✓ daily_records 테이블")
@@ -443,6 +417,73 @@ def get_volatility(df, window):
     if len(df) < window + 1:
         return None
     return df["종가"].pct_change().tail(window).std()
+
+
+def calculate_initial_signal(df):
+    """초기 포착 조건 계산"""
+    if len(df) < 25:
+        return False, {}
+
+    last = df.iloc[-1]
+    prev = df.iloc[-2]
+
+    vol_5 = df["거래량"].tail(5)
+    vol_20 = df["거래량"].tail(20)
+    high_20 = df["고가"].tail(20).max()
+
+    cond_volume = (last["거래량"] >= prev["거래량"] * 3) or (last["거래량"] >= vol_5.mean() * 5)
+    cond_price = (last["종가"] >= high_20) or (last["종가"] >= high_20 * 0.99)
+    body = last["종가"] - last["시가"]
+    range_candle = max(last["고가"] - last["저가"], 1e-9)
+    cond_candle = (last["종가"] > last["시가"]) and ((body / range_candle) >= 0.7) and ((last["종가"] / last["시가"] - 1) >= 0.04)
+
+    vol_5_std = get_volatility(df, 5)
+    vol_20_std = get_volatility(df, 20)
+    cond_vcp = False
+    if vol_5_std is not None and vol_20_std is not None:
+        cond_vcp = (vol_5_std < vol_20_std) and (prev["거래량"] <= vol_5.mean())
+
+    is_initial = cond_volume and cond_price and cond_candle and cond_vcp
+
+    meta = {
+        "volume_spike": cond_volume,
+        "price_breakout": cond_price,
+        "candle_strong": cond_candle,
+        "vcp": cond_vcp,
+        "close": int(last["종가"]),
+        "volume": int(last["거래량"]),
+    }
+    return is_initial, meta
+
+
+def calculate_monitoring_signal(df):
+    """모니터링 조건 계산"""
+    if len(df) < 25:
+        return False, {}
+
+    last = df.iloc[-1]
+    prev = df.iloc[-2]
+
+    ma5 = df["종가"].tail(5).mean()
+    ma20 = df["종가"].tail(20).mean()
+    high_20 = df["고가"].tail(20).max()
+    vol5_mean = df["거래량"].tail(5).mean()
+
+    cond_trend = (last["종가"] >= ma5) or (last["종가"] >= ma20)
+    cond_volume = (last["거래량"] >= prev["거래량"] * 0.8) or (last["거래량"] >= vol5_mean * 0.8)
+    cond_price = (last["종가"] >= high_20 * 0.9) or (last["종가"] >= prev["종가"] * 1.03)
+    cond_candle = last["종가"] >= last["시가"]
+
+    is_monitor = cond_trend and cond_volume and cond_price and cond_candle
+    meta = {
+        "trend": cond_trend,
+        "volume_hold": cond_volume,
+        "price_hold": cond_price,
+        "candle_bull": cond_candle,
+        "close": int(last["종가"]),
+        "volume": int(last["거래량"]),
+    }
+    return is_monitor, meta
 
 
 # ==================== 급등주 분류 헬퍼 (A/B/C) ====================
@@ -587,6 +628,24 @@ def summarize_reasons(ind, label):
         reasons.append("다중 조건 충족")
 
     return "; ".join(reasons)
+
+
+def get_stock_history(code):
+    """종목 이력 조회"""
+    conn = sqlite3.connect(DB_FILE, timeout=30)
+    cursor = conn.cursor()
+
+    cursor.execute('SELECT * FROM stock_history WHERE 종목코드 = ?', (code,))
+    result = cursor.fetchone()
+
+    if result:
+        col_names = [desc[0] for desc in cursor.description]
+        result_dict = dict(zip(col_names, result))
+        conn.close()
+        return result_dict
+
+    conn.close()
+    return None
 
 
 def get_statistics():
@@ -813,28 +872,33 @@ def analyze_single_stock(code, name, market, start_date, end_date, threshold, vo
         dict or None: 조건을 만족하면 종목 정보 딕셔너리, 아니면 None
     """
     try:
-        # pykrx로 데이터 가져오기 (성능 개선)
-        hist = stock.get_market_ohlcv(start_date.strftime("%Y%m%d"), end_date.strftime("%Y%m%d"), code)
+        # 데이터 가져오기
+        hist = fdr.DataReader(code, start_date, end_date)
 
-        if hist is None or hist.empty or len(hist) < 20:
+        if len(hist) < 20:
             return None
 
         # 현재가와 20일 이동평균 계산
-        current_price = hist['종가'].iloc[-1]
-        ma_20 = hist['종가'].tail(20).mean()
+        current_price = hist['Close'].iloc[-1]
+        ma_20 = hist['Close'].tail(20).mean()
 
         # 상승률 계산
         diff_pct = ((current_price - ma_20) / ma_20) * 100
 
-        # 거래량 체크
-        current_volume = hist['거래량'].iloc[-1]
-        avg_volume_20 = hist['거래량'].tail(20).mean()
+        # 거래량 체크 (Volume 컬럼이 있는 경우만)
+        if 'Volume' in hist.columns:
+            current_volume = hist['Volume'].iloc[-1]
+            avg_volume_20 = hist['Volume'].tail(20).mean()
 
-        # 거래량 배수 조건 체크
-        if volume_multiplier > 1.0 and current_volume < (avg_volume_20 * volume_multiplier):
-            return None
+            # 거래량 배수 조건 체크
+            if volume_multiplier > 1.0 and current_volume < (avg_volume_20 * volume_multiplier):
+                return None
 
-        volume_ratio = (current_volume / avg_volume_20) if avg_volume_20 > 0 else 0
+            volume_ratio = (current_volume / avg_volume_20) if avg_volume_20 > 0 else 0
+        else:
+            current_volume = 0
+            avg_volume_20 = 0
+            volume_ratio = 0
 
         # 상승률 조건 체크
         if diff_pct < threshold:
@@ -892,27 +956,26 @@ def screen_stocks(threshold=5.0, max_workers=20, volume_multiplier=1.0):
 
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         try:
-            # 모든 작업 제출 (iterrows 대신 to_dict 사용 - 성능 개선)
-            stock_list = df_krx.to_dict('records')
+            # 모든 작업 제출
             future_to_stock = {
                 executor.submit(
                     analyze_single_stock,
                     row['Code'], row['Name'], row['Market'],
                     start_date, end_date, threshold, volume_multiplier
                 ): (row['Code'], row['Name'], row['Market'])
-                for row in stock_list
+                for _, row in df_krx.iterrows()
             }
 
             print(f"[정보] {len(future_to_stock)}개 종목 병렬 분석 중...\n")
 
-            # 전체 타임아웃 5분
+            # ⭐ 전체 타임아웃 5분 추가
             for future in as_completed(future_to_stock, timeout=300):
                 code, name, market = future_to_stock[future]
                 completed_count += 1
 
                 try:
-                    # as_completed가 반환한 future는 이미 완료된 상태
-                    result = future.result()
+                    # ⭐ 개별 타임아웃 30초 추가
+                    result = future.result(timeout=30)
 
                     if result:
                         history = update_stock_history(result)
@@ -1220,6 +1283,67 @@ def format_theme_results(df, top_n=10):
     return message
 
 
+def handle_theme_crawling():
+    """네이버 테마 크롤링 실행 처리"""
+    print("\n[실행] 네이버 금융 테마 크롤링을 시작합니다...\n")
+
+    # 페이지 수 입력
+    pages_input = input("[입력] 크롤링할 페이지 수 (기본값: 7, 전체 약 267개 테마): ").strip()
+    try:
+        max_pages = int(pages_input) if pages_input else 7
+        max_pages = max(1, min(10, max_pages))  # 1-10 범위로 제한
+    except ValueError:
+        print("[오류] 잘못된 입력입니다. 기본값 7을 사용합니다.")
+        max_pages = 7
+
+    print(f"\n[설정] {max_pages}페이지 크롤링\n")
+
+    # 크롤링 실행
+    df_themes = crawl_all_themes(max_pages)
+
+    if df_themes.empty:
+        print("[오류] 크롤링된 데이터가 없습니다.")
+        return
+
+    # 결과 미리보기
+    print("\n" + "="*70)
+    print("[상위 10개 테마]")
+    print("="*70)
+
+    # 등락률 순으로 정렬하여 상위 10개 출력
+    df_copy = df_themes.copy()
+    df_copy['등락률_숫자'] = df_copy['전일대비'].str.replace('%', '', regex=False).str.replace('+', '', regex=False).astype(float)
+    df_sorted = df_copy.sort_values('등락률_숫자', ascending=False)
+
+    print(df_sorted[['테마명', '전일대비', '최근3일등락률', '상승', '하락', '주도주1']].head(10).to_string(index=False))
+
+    # 텔레그램 메시지 포맷
+    message = format_theme_results(df_themes, top_n=10)
+
+    # 콘솔 출력
+    print("\n" + "="*70)
+    print("[텔레그램 전송 메시지 미리보기]")
+    print("="*70)
+    print(message)
+
+    # 텔레그램 전송
+    send_choice = input("\n텔레그램으로 전송하시겠습니까? (y/n, 기본값: y): ").strip().lower()
+    if send_choice != 'n':
+        print("\n[전송] 텔레그램으로 전송 중...")
+        success = send_telegram_message_sync(message)
+        if success:
+            print("[OK] 텔레그램 전송 완료!")
+        else:
+            print("[오류] 텔레그램 전송 실패")
+
+    # CSV 파일 저장
+    save_choice = input("\nCSV 파일로 저장하시겠습니까? (y/n, 기본값: y): ").strip().lower()
+    if save_choice != 'n':
+        filename = f"naver_themes_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+        df_themes.to_csv(filename, index=False, encoding='utf-8-sig')
+        print(f"[저장] {filename} 파일로 저장되었습니다.")
+
+
 def analyze_theme_stock(code, name, theme_name, start_date, end_date, threshold):
     """
     테마별 단일 종목 분석 (병렬 처리용)
@@ -1240,15 +1364,15 @@ def analyze_theme_stock(code, name, theme_name, start_date, end_date, threshold)
 
     for attempt in range(max_retries):
         try:
-            # pykrx로 데이터 가져오기 (성능 개선)
-            hist = stock.get_market_ohlcv(start_date.strftime("%Y%m%d"), end_date.strftime("%Y%m%d"), code)
+            # 데이터 가져오기 (타임아웃 포함)
+            hist = fdr.DataReader(code, start_date, end_date)
 
             if hist is None or hist.empty or len(hist) < 20:
                 return None
 
             # 현재가와 20일 이동평균 계산
-            current_price = hist['종가'].iloc[-1]
-            ma_20 = hist['종가'].tail(20).mean()
+            current_price = hist['Close'].iloc[-1]
+            ma_20 = hist['Close'].tail(20).mean()
 
             # 상승률 계산
             diff_pct = ((current_price - ma_20) / ma_20) * 100
@@ -1261,7 +1385,7 @@ def analyze_theme_stock(code, name, theme_name, start_date, end_date, threshold)
                     '현재가': int(current_price),
                     '20일평균': int(ma_20),
                     '상승률': round(diff_pct, 2),
-                    '거래량': int(hist['거래량'].iloc[-1]) if '거래량' in hist.columns else 0
+                    '거래량': int(hist['Volume'].iloc[-1]) if 'Volume' in hist else 0
                 }
             return None
 
@@ -1272,6 +1396,8 @@ def analyze_theme_stock(code, name, theme_name, start_date, end_date, threshold)
             if attempt < max_retries - 1:
                 time.sleep(retry_delay)
                 continue
+            # 마지막 시도에서도 실패하면 None 반환 (에러 로그는 옵션)
+            # print(f"[오류] {code} {name}: {str(e)}")
             return None
 
     return None
@@ -1329,8 +1455,7 @@ def screen_theme_stocks_from_csv(csv_file, threshold=5.0, max_workers=20):
 
     # 병렬 처리로 종목 분석
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        # 모든 종목에 대해 작업 제출 (iterrows 대신 to_dict 사용 - 성능 개선)
-        stock_list = df.to_dict('records')
+        # 모든 종목에 대해 작업 제출
         future_to_stock = {
             executor.submit(
                 analyze_theme_stock,
@@ -1341,18 +1466,17 @@ def screen_theme_stocks_from_csv(csv_file, threshold=5.0, max_workers=20):
                 end_date,
                 threshold
             ): (row['종목코드'], row['종목명'], row['테마명'])
-            for row in stock_list
+            for _, row in df.iterrows()
         }
 
-        # 완료된 작업 처리 (전체 타임아웃 5분)
+        # 완료된 작업 처리 (타임아웃 추가)
         try:
             for future in as_completed(future_to_stock, timeout=300):
                 code, name, theme = future_to_stock[future]
                 completed_count += 1
 
                 try:
-                    # as_completed가 반환한 future는 이미 완료된 상태
-                    result = future.result()
+                    result = future.result(timeout=15)
                     if result:
                         # DB에 이력 업데이트
                         history = update_stock_history(result)
@@ -1463,6 +1587,110 @@ def format_theme_screening_results(results, threshold):
     return message
 
 
+def handle_theme_stock_screening():
+    """테마별 종목 급등주 스크리닝 실행 처리"""
+    print("\n[실행] 테마별 종목 급등주 스크리닝을 시작합니다...\n")
+    
+    # CSV 파일 선택
+    import glob
+    csv_files = glob.glob("naver_theme_stocks_*.csv")
+
+    if not csv_files:
+        print("[오류] 테마 종목 CSV 파일이 없습니다.")
+        print("[안내] 먼저 '1. 네이버 테마 크롤링'을 실행하여 CSV 파일을 생성하세요.")
+        return
+
+    # 최신 파일 찾기
+    csv_files.sort(reverse=True)
+    latest_csv = csv_files[0]
+
+    print(f"[파일] 최신 CSV 파일: {latest_csv}")
+
+    # 다른 파일 선택 옵션
+    if len(csv_files) > 1:
+        print(f"\n[참고] 총 {len(csv_files)}개의 CSV 파일이 있습니다.")
+        use_latest = input("최신 파일을 사용하시겠습니까? (y/n, 기본값: y): ").strip().lower()
+
+        if use_latest == 'n':
+            print("\n사용 가능한 파일 목록:")
+            for i, f in enumerate(csv_files, 1):
+                print(f"  {i}. {f}")
+
+            file_choice = input("\n파일 번호를 선택하세요: ").strip()
+            try:
+                file_idx = int(file_choice) - 1
+                if 0 <= file_idx < len(csv_files):
+                    latest_csv = csv_files[file_idx]
+                else:
+                    print("[오류] 잘못된 번호입니다. 최신 파일을 사용합니다.")
+            except ValueError:
+                print("[오류] 잘못된 입력입니다. 최신 파일을 사용합니다.")
+
+    print(f"\n[선택] {latest_csv}\n")
+
+    # 스크리닝 조건 입력
+    threshold_input = input("[입력] 상승률 기준을 입력하세요 (기본값: 5.0%): ").strip() or "5.0"
+    try:
+        threshold = float(threshold_input)
+    except ValueError:
+        print("[오류] 잘못된 입력입니다. 기본값 5.0%를 사용합니다.")
+        threshold = 5.0
+
+    workers_input = input("[입력] 병렬 처리 스레드 수 (기본값: 20, 권장: 10-30): ").strip() or "20"
+    try:
+        max_workers = int(workers_input)
+        max_workers = max(5, min(50, max_workers))
+    except ValueError:
+        print("[오류] 잘못된 입력입니다. 기본값 20을 사용합니다.")
+        max_workers = 20
+
+    print(f"\n[설정] 상승률 기준: {threshold}%")
+    print(f"[설정] 병렬 처리 스레드: {max_workers}개\n")
+
+    # 스크리닝 실행
+    results = screen_theme_stocks_from_csv(latest_csv, threshold, max_workers)
+
+    if not results:
+        print("\n[결과] 조건을 만족하는 종목이 없습니다.")
+        return
+
+    # 결과를 DataFrame으로 변환
+    df_results = pd.DataFrame(results)
+
+    # 결과 미리보기
+    print("\n" + "="*70)
+    print("[상위 20개 종목]")
+    print("="*70)
+    display_cols = ['테마명', '종목명', '종목코드', '현재가', '상승률']
+    available_cols = [col for col in display_cols if col in df_results.columns]
+    print(df_results[available_cols].head(20).to_string(index=False))
+
+    # 텔레그램 메시지 포맷
+    message = format_theme_screening_results(results, threshold)
+
+    # 콘솔 출력
+    print("\n" + "="*70)
+    print("[텔레그램 전송 메시지 미리보기]")
+    print("="*70)
+    print(message)
+
+    # 텔레그램 전송
+    send_choice = input("\n텔레그램으로 전송하시겠습니까? (y/n, 기본값: y): ").strip().lower()
+    if send_choice != 'n':
+        print("\n[전송] 텔레그램으로 전송 중...")
+        success = send_telegram_message_sync(message)
+        if success:
+            print("[OK] 텔레그램 전송 완료!")
+        else:
+            print("[오류] 텔레그램 전송 실패")
+
+    # CSV 파일 저장
+    save_choice = input("\nCSV 파일로 저장하시겠습니까? (y/n, 기본값: y): ").strip().lower()
+    if save_choice != 'n':
+        filename = f"theme_screening_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+        df_results.to_csv(filename, index=False, encoding='utf-8-sig')
+        print(f"[저장] {filename} 파일로 저장되었습니다.")
+
 def screen_surge_stocks(max_workers=10):
     """급등주 초기 포착 + 모니터링 (KOSPI+KOSDAQ, A/B/C 분류)"""
     # DB 초기화 (테이블 생성)
@@ -1525,112 +1753,93 @@ def screen_surge_stocks(max_workers=10):
             '이유': reason,
         }
 
-    # 병렬 처리 (with 문 사용 안 함 - 타임아웃 시 즉시 종료 위해)
-    executor = ThreadPoolExecutor(max_workers=max_workers)
-    futures = {executor.submit(analyze_stock, row): row for _, row in df_krx.iterrows()}
+    # 병렬 처리
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futures = {executor.submit(analyze_stock, row): row for _, row in df_krx.iterrows()}
 
-    completed = 0
-    total = len(futures)
-    start_time = time.time()
-    pending = set(futures)
-    timeout_exit = False
-    last_progress_time = time.time()  # 마지막 진행 로그 시간
+        completed = 0
+        total = len(futures)
+        start_time = time.time()
+        pending = set(futures)
 
-    # 전체 실행 시간 제한 (10분)
-    MAX_TOTAL_TIME = 600
+        try:
+            # 30초마다 완료 여부 점검, 완료 없는 경우 남은 작업 취소
+            while pending:
+                done, pending = wait(pending, timeout=30, return_when=FIRST_COMPLETED)
 
-    try:
-        # 30초마다 완료 여부 점검, 완료 없는 경우 남은 작업 취소
-        while pending:
-            # 전체 시간 초과 체크
-            elapsed_total = time.time() - start_time
-            if elapsed_total > MAX_TOTAL_TIME:
-                print(f"\n[시간초과] 전체 {MAX_TOTAL_TIME//60}분 초과 - 미완료 {len(pending)}개 취소 후 종료")
-                timeout_exit = True
-                break
+                if not done:
+                    with lock:
+                        error_count += len(pending)
+                    print(f"\n[타임아웃] 30초 동안 완료 없음 - 미완료 {len(pending)}개 취소 후 종료")
+                    for future in pending:
+                        future.cancel()
+                    break
 
-            done, pending = wait(pending, timeout=30, return_when=FIRST_COMPLETED)
+                for future in done:
+                    completed += 1
 
-            if not done:
-                with lock:
-                    error_count += len(pending)
-                print(f"\n[타임아웃] 30초 동안 완료 없음 - 미완료 {len(pending)}개 취소 후 종료")
-                timeout_exit = True
-                break
+                    if completed % 50 == 0:
+                        elapsed = time.time() - start_time
+                        rate = completed / elapsed if elapsed > 0 else 0
+                        remaining = total - completed
+                        remaining_time = (remaining / rate) if rate > 0 else 0
+                        detected = len(results_A) + len(results_B) + len(results_C)
+                        print(f"[진행] {completed}/{total} 완료 ({completed*100//total}%) - {rate:.1f}개/초 (남은 것: {remaining}개, 예상: {remaining_time:.0f}초, 발견: {detected}개)")
 
-            for future in done:
-                completed += 1
-
-                # 10초마다 또는 50개마다 진행 로그 출력
-                now = time.time()
-                if completed % 50 == 0 or (now - last_progress_time) > 10:
-                    elapsed = now - start_time
-                    rate = completed / elapsed if elapsed > 0 else 0
-                    remaining = total - completed
-                    remaining_time = (remaining / rate) if rate > 0 else 0
-                    detected = len(results_A) + len(results_B) + len(results_C)
-                    print(f"[진행] {completed}/{total} 완료 ({completed*100//total}%) - {rate:.1f}개/초 (남은 것: {remaining}개, 예상: {remaining_time:.0f}초, 발견: {detected}개)")
-                    last_progress_time = now
-
-                try:
-                    result = future.result()
-                    if result:
-                        with lock:
-                            label = result['class']
-                            ticker = result['종목코드']
-                            reason = result.get('이유', '')
-                            if label == 'A':
-                                results_A.append(result)
-                                watchlist[ticker] = {
-                                    'name': result['종목명'],
-                                    'market': result['시장'],
-                                    'first_detected': watchlist.get(ticker, {}).get('first_detected', today_str),
-                                    'last_detected': today_str,
-                                    'grade': 'A',
-                                }
-                                print(f"🆕 [A급] {result['종목명']}({ticker}) ({result['시장']}) - {result['현재가']:,}원 점수:{result['score']} | {reason}")
-                            elif label == 'B':
-                                results_B.append(result)
-                                # B급도 워치리스트에 등록/갱신
-                                if ticker in watchlist:
-                                    watchlist[ticker]['last_detected'] = today_str
-                                    # 기존 등급이 A가 아니면 B로 업데이트
-                                    if watchlist[ticker].get('grade') != 'A':
-                                        watchlist[ticker]['grade'] = 'B'
-                                else:
+                    try:
+                        result = future.result()
+                        if result:
+                            with lock:
+                                label = result['class']
+                                ticker = result['종목코드']
+                                reason = result.get('이유', '')
+                                if label == 'A':
+                                    results_A.append(result)
                                     watchlist[ticker] = {
                                         'name': result['종목명'],
                                         'market': result['시장'],
-                                        'first_detected': today_str,
+                                        'first_detected': watchlist.get(ticker, {}).get('first_detected', today_str),
                                         'last_detected': today_str,
-                                        'grade': 'B',
+                                        'grade': 'A',
                                     }
-                                print(f"⚡ [B급] {result['종목명']}({ticker}) ({result['시장']}) - {result['현재가']:,}원 점수:{result['score']} | {reason}")
-                            elif label == 'C':
-                                results_C.append(result)
-                                if ticker in watchlist:
-                                    watchlist[ticker]['last_detected'] = today_str
-                                # C급은 로그 최소화
-                except Exception:
-                    with lock:
-                        error_count += 1
-                    if error_count % 10 == 0:
-                        print(f"[경고] 오류/타임아웃 누적 {error_count}건 - 문제 종목 스킵")
+                                    print(f"🆕 [A급] {result['종목명']}({ticker}) ({result['시장']}) - {result['현재가']:,}원 점수:{result['score']} | {reason}")
+                                elif label == 'B':
+                                    results_B.append(result)
+                                    # B급도 워치리스트에 등록/갱신
+                                    if ticker in watchlist:
+                                        watchlist[ticker]['last_detected'] = today_str
+                                        # 기존 등급이 A가 아니면 B로 업데이트
+                                        if watchlist[ticker].get('grade') != 'A':
+                                            watchlist[ticker]['grade'] = 'B'
+                                    else:
+                                        watchlist[ticker] = {
+                                            'name': result['종목명'],
+                                            'market': result['시장'],
+                                            'first_detected': today_str,
+                                            'last_detected': today_str,
+                                            'grade': 'B',
+                                        }
+                                    print(f"⚡ [B급] {result['종목명']}({ticker}) ({result['시장']}) - {result['현재가']:,}원 점수:{result['score']} | {reason}")
+                                elif label == 'C':
+                                    results_C.append(result)
+                                    if ticker in watchlist:
+                                        watchlist[ticker]['last_detected'] = today_str
+                                    # C급은 로그 최소화
+                    except Exception:
+                        with lock:
+                            error_count += 1
+                        if error_count % 10 == 0:
+                            print(f"[경고] 오류/타임아웃 누적 {error_count}건 - 문제 종목 스킵")
 
-    except KeyboardInterrupt:
-        print(f"\n[중단] 사용자 중단 - {completed}/{total} 완료")
-        timeout_exit = True
+        except KeyboardInterrupt:
+            print(f"\n[중단] 사용자 중단 - {completed}/{total} 완료")
 
-    finally:
-        save_watchlist(watchlist)
-        # 강제 종료 (wait=False: 실행 중인 작업 기다리지 않음, cancel_futures=True: 대기 중인 작업 취소)
-        executor.shutdown(wait=False, cancel_futures=True)
+            for future in pending:
+                if not future.done():
+                    future.cancel()
 
-    if timeout_exit:
-        print("[종료] 강제 종료 완료")
-        elapsed_total = time.time() - start_time
-        print(f"[통계] 완료: {completed}/{total}, 소요: {elapsed_total:.1f}초")
-        return results_A + results_B + results_C, []
+        finally:
+            save_watchlist(watchlist)
 
     elapsed_total = time.time() - start_time
     print("\n" + "="*70)
@@ -1776,21 +1985,21 @@ if __name__ == "__main__":
                     df_results.to_csv(filename, index=False, encoding='utf-8-sig')
                     print(f"[저장] {filename} 파일로 저장되었습니다.")
             elif choice == "3":
-                print("\n[실행] 급등주 초기 포착 + 모니터링을 시작합니다...")
-                print("[설정] 병렬 처리 스레드: 15개\n")
+                print("\n[실행] 급등주 초기 포착 + 모니터링을 시작합니다...\n")
                 
-                results, _ = screen_surge_stocks(max_workers=15)
+                workers_input = input("[입력] 병렬 처리 스레드 수 (기본값: 5): ").strip() or "5"
+                try:
+                    max_workers = int(workers_input)
+                    max_workers = max(1, min(10, max_workers))  # 1-10 범위로 제한
+                except ValueError:
+                    print("[오류] 잘못된 입력입니다. 기본값 5를 사용합니다.")
+                    max_workers = 5
+                
+                results, _ = screen_surge_stocks(max_workers)
 
-                # 단일 순회로 A/B/C 분류 (성능 최적화)
-                results_A, results_B, results_C = [], [], []
-                for r in results:
-                    cls = r.get('class')
-                    if cls == 'A':
-                        results_A.append(r)
-                    elif cls == 'B':
-                        results_B.append(r)
-                    elif cls == 'C':
-                        results_C.append(r)
+                results_A = [r for r in results if r.get('class') == 'A']
+                results_B = [r for r in results if r.get('class') == 'B']
+                results_C = [r for r in results if r.get('class') == 'C']
 
                 def fmt_stock(r):
                     """가독성 높은 종목 정보 포맷"""

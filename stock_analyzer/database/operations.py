@@ -203,11 +203,14 @@ class DatabaseManager(LoggerMixin):
         """
         급등주 스크리닝 결과를 저장합니다.
 
+        surge_screening_results 테이블에 저장하고,
+        동시에 stock_history와 daily_records에도 기록하여 전체 이력 추적에 포함시킵니다.
+
         Returns:
-            저장 통계 (success_count, new_count, update_count)
+            저장 통계 (success_count, new_count, update_count, history_updated)
         """
         if not results:
-            return {'success_count': 0, 'new_count': 0, 'update_count': 0}
+            return {'success_count': 0, 'new_count': 0, 'update_count': 0, 'history_updated': 0}
 
         screening_date = datetime.now().strftime('%Y-%m-%d')
         now = datetime.now()
@@ -215,6 +218,7 @@ class DatabaseManager(LoggerMixin):
         success_count = 0
         new_count = 0
         update_count = 0
+        history_updated = 0
 
         with self.session_scope() as session:
             for r in results:
@@ -267,15 +271,33 @@ class DatabaseManager(LoggerMixin):
                     self.logger.error(f"저장 오류: {r.get('종목코드', '')} - {e}")
                     session.rollback()
 
+        # 전체 이력 추적을 위해 stock_history 및 daily_records에도 기록
+        for r in results:
+            try:
+                # update_stock_history는 별도 세션을 사용하므로 개별 호출
+                history_data = {
+                    '종목코드': r.get('종목코드', ''),
+                    '종목명': r.get('종목명', ''),
+                    '테마명': r.get('테마명', ''),  # 급등주는 테마명이 없을 수 있음
+                    '현재가': r.get('현재가', 0),
+                    '상승률': r.get('today_return', 0.0),
+                    '거래량': r.get('거래량', 0)  # 급등주 결과에 거래량이 없을 수 있음
+                }
+                self.update_stock_history(history_data)
+                history_updated += 1
+            except Exception as e:
+                self.logger.warning(f"이력 업데이트 오류: {r.get('종목코드', '')} - {e}")
+
         self.logger.info(
             f"급등주 결과 저장 완료: 총 {success_count}개 "
-            f"(신규: {new_count}, 업데이트: {update_count})"
+            f"(신규: {new_count}, 업데이트: {update_count}, 이력기록: {history_updated})"
         )
 
         return {
             'success_count': success_count,
             'new_count': new_count,
-            'update_count': update_count
+            'update_count': update_count,
+            'history_updated': history_updated
         }
 
     def get_surge_results(

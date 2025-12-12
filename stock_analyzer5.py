@@ -4,6 +4,7 @@ import socket
 from pykrx import stock
 import FinanceDataReader as fdr
 import pandas as pd
+import numpy as np
 from datetime import datetime, timedelta
 from telegram import Bot
 import asyncio
@@ -14,6 +15,7 @@ import threading
 import requests
 from bs4 import BeautifulSoup
 import sqlite3
+from typing import Dict, Tuple, Optional
 
 # 환경변수 로드
 load_dotenv()

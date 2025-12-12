@@ -237,6 +237,8 @@ class StockScreener(LoggerMixin):
                 'score': signal.score,
                 '현재가': int(indicators['close']),
                 'today_return': round(indicators['today_return'], 2),
+                '거래량': int(indicators.get('volume_today', 0)),  # 전체 이력 추적을 위해 추가
+                '테마명': '',  # 급등주는 테마명 없음
                 '이유': '; '.join(signal.reasons),
                 'mode': 'initial'
             }

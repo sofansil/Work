@@ -3,13 +3,13 @@
     "name": "HD현대중공업",
     "market": "KOSPI",
     "first_detected": "2025-12-11",
-    "last_detected": "2025-12-11"
+    "last_detected": "2025-12-12"
   },
   "010130": {
     "name": "고려아연",
     "market": "KOSPI",
     "first_detected": "2025-12-11",
-    "last_detected": "2025-12-11"
+    "last_detected": "2025-12-12"
   },
   "000810": {
     "name": "삼성화재",
@@ -21,96 +21,5010 @@
     "name": "KT",
     "market": "KOSPI",
     "first_detected": "2025-12-11",
-    "last_detected": "2025-12-11"
+    "last_detected": "2025-12-12",
+    "grade": "A"
   },
   "047050": {
     "name": "포스코인터내셔널",
     "market": "KOSPI",
     "first_detected": "2025-12-11",
-    "last_detected": "2025-12-11"
+    "last_detected": "2025-12-12"
   },
   "443060": {
     "name": "HD현대마린솔루션",
     "market": "KOSPI",
     "first_detected": "2025-12-11",
-    "last_detected": "2025-12-11"
+    "last_detected": "2025-12-12"
   },
   "010620": {
     "name": "HD현대미포",
     "market": "KOSPI",
     "first_detected": "2025-12-11",
-    "last_detected": "2025-12-11"
+    "last_detected": "2025-12-12",
+    "grade": "A"
   },
   "029780": {
     "name": "삼성카드",
     "market": "KOSPI",
     "first_detected": "2025-12-11",
-    "last_detected": "2025-12-11"
+    "last_detected": "2025-12-12",
+    "grade": "A"
   },
   "088980": {
     "name": "맥쿼리인프라",
     "market": "KOSPI",
     "first_detected": "2025-12-11",
-    "last_detected": "2025-12-11"
+    "last_detected": "2025-12-12",
+    "grade": "A"
   },
   "062040": {
     "name": "산일전기",
     "market": "KOSPI",
     "first_detected": "2025-12-11",
-    "last_detected": "2025-12-11"
+    "last_detected": "2025-12-12"
   },
   "108490": {
     "name": "로보티즈",
     "market": "KOSDAQ",
     "first_detected": "2025-12-11",
-    "last_detected": "2025-12-11"
+    "last_detected": "2025-12-12"
   },
   "002380": {
     "name": "KCC",
     "market": "KOSPI",
     "first_detected": "2025-12-11",
-    "last_detected": "2025-12-11"
+    "last_detected": "2025-12-12",
+    "grade": "B"
   },
   "052690": {
     "name": "한전기술",
     "market": "KOSPI",
     "first_detected": "2025-12-11",
-    "last_detected": "2025-12-11"
+    "last_detected": "2025-12-12"
   },
   "042670": {
     "name": "HD현대인프라코어",
     "market": "KOSPI",
     "first_detected": "2025-12-11",
-    "last_detected": "2025-12-11"
+    "last_detected": "2025-12-12",
+    "grade": "B"
   },
   "012750": {
     "name": "에스원",
     "market": "KOSPI",
     "first_detected": "2025-12-11",
-    "last_detected": "2025-12-11"
+    "last_detected": "2025-12-12"
   },
   "026960": {
     "name": "동서",
     "market": "KOSPI",
     "first_detected": "2025-12-11",
-    "last_detected": "2025-12-11"
+    "last_detected": "2025-12-12"
   },
   "068760": {
     "name": "셀트리온제약",
     "market": "KOSDAQ",
     "first_detected": "2025-12-11",
-    "last_detected": "2025-12-11"
+    "last_detected": "2025-12-12"
   },
   "009970": {
     "name": "영원무역홀딩스",
     "market": "KOSPI",
     "first_detected": "2025-12-11",
-    "last_detected": "2025-12-11"
+    "last_detected": "2025-12-12"
   },
   "103590": {
     "name": "일진전기",
     "market": "KOSPI",
     "first_detected": "2025-12-11",
-    "last_detected": "2025-12-11"
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "005930": {
+    "name": "삼성전자",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "005935": {
+    "name": "삼성전자우",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "028260": {
+    "name": "삼성물산",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "034020": {
+    "name": "두산에너빌리티",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "000270": {
+    "name": "기아",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "267260": {
+    "name": "HD현대일렉트릭",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "012450": {
+    "name": "한화에어로스페이스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "012330": {
+    "name": "현대모비스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "011200": {
+    "name": "HMM",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "064350": {
+    "name": "현대로템",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "005490": {
+    "name": "POSCO홀딩스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "010140": {
+    "name": "삼성중공업",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "138040": {
+    "name": "메리츠금융지주",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "267250": {
+    "name": "HD현대",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "024110": {
+    "name": "기업은행",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "034730": {
+    "name": "SK",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "086280": {
+    "name": "현대글로비스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "003550": {
+    "name": "LG",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "047810": {
+    "name": "한국항공우주",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "272210": {
+    "name": "한화시스템",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "071050": {
+    "name": "한국금융지주",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "277810": {
+    "name": "레인보우로보틱스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "000720": {
+    "name": "현대건설",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "003490": {
+    "name": "대한항공",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "180640": {
+    "name": "한진칼",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "039490": {
+    "name": "키움증권",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "064400": {
+    "name": "LG씨엔에스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "000880": {
+    "name": "한화",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "006260": {
+    "name": "LS",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "241560": {
+    "name": "두산밥캣",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "454910": {
+    "name": "두산로보틱스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "138930": {
+    "name": "BNK금융지주",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "175330": {
+    "name": "JB금융지주",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "005385": {
+    "name": "현대차우",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "004020": {
+    "name": "현대제철",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "001440": {
+    "name": "대한전선",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "082740": {
+    "name": "한화엔진",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "036460": {
+    "name": "한국가스공사",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "017800": {
+    "name": "현대엘리베이터",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "011780": {
+    "name": "금호석유화학",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "071970": {
+    "name": "HD현대마린엔진",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "009540": {
+    "name": "HD한국조선해양",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "016360": {
+    "name": "삼성증권",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "088350": {
+    "name": "한화생명",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "003690": {
+    "name": "코리안리",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "462870": {
+    "name": "시프트업",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "009420": {
+    "name": "한올바이오파마",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "097230": {
+    "name": "HJ중공업",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "475830": {
+    "name": "오름테라퓨틱",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "160190": {
+    "name": "하이젠알앤엠",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "023530": {
+    "name": "롯데쇼핑",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "006280": {
+    "name": "녹십자",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "006040": {
+    "name": "동원산업",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "483650": {
+    "name": "달바글로벌",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "083650": {
+    "name": "비에이치아이",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "023590": {
+    "name": "다우기술",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "011210": {
+    "name": "현대위아",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "058610": {
+    "name": "에스피지",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "060370": {
+    "name": "LS마린솔루션",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "006360": {
+    "name": "GS건설",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "375500": {
+    "name": "DL이앤씨",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "445680": {
+    "name": "큐리옥스바이오시스템즈",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "007340": {
+    "name": "DN오토모티브",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "047040": {
+    "name": "대우건설",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "437730": {
+    "name": "삼현",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "017960": {
+    "name": "한국카본",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "003570": {
+    "name": "SNT다이내믹스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "077970": {
+    "name": "STX엔진",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "001430": {
+    "name": "세아베스틸지주",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "466100": {
+    "name": "클로봇",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "003540": {
+    "name": "대신증권",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "00680K": {
+    "name": "미래에셋증권2우B",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "249420": {
+    "name": "일동제약",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "000500": {
+    "name": "가온전선",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "001800": {
+    "name": "오리온홀딩스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "071320": {
+    "name": "지역난방공사",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "100090": {
+    "name": "SK오션플랜트",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "319400": {
+    "name": "현대무벡스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "317450": {
+    "name": "명인제약",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "424870": {
+    "name": "이뮨온시아",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "389470": {
+    "name": "인벤티지랩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "388720": {
+    "name": "유일로보틱스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "030610": {
+    "name": "교보증권",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "229640": {
+    "name": "LS에코에너지",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "012630": {
+    "name": "HDC",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "082640": {
+    "name": "동양생명",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "397030": {
+    "name": "에이프릴바이오",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "031980": {
+    "name": "피에스케이홀딩스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "100840": {
+    "name": "SNT에너지",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "009450": {
+    "name": "경동나비엔",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "090360": {
+    "name": "로보스타",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "002350": {
+    "name": "넥센타이어",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "071055": {
+    "name": "한국금융지주우",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "039130": {
+    "name": "하나투어",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "102940": {
+    "name": "코오롱생명과학",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "003620": {
+    "name": "KG모빌리티",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "475150": {
+    "name": "SK이터닉스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "079900": {
+    "name": "전진건설로봇",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "053800": {
+    "name": "안랩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "090710": {
+    "name": "휴림로봇",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "372320": {
+    "name": "큐로셀",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "002020": {
+    "name": "코오롱",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "460930": {
+    "name": "현대힘스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "025540": {
+    "name": "한국단자",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "125490": {
+    "name": "한라캐스트",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "001570": {
+    "name": "금양",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "001270": {
+    "name": "부국증권",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "099320": {
+    "name": "쎄트렉아이",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "383800": {
+    "name": "LX홀딩스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "322000": {
+    "name": "HD현대에너지솔루션",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "006380": {
+    "name": "카프로",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "056080": {
+    "name": "유진로봇",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "094170": {
+    "name": "동운아나텍",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "138610": {
+    "name": "나이벡",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "003030": {
+    "name": "세아제강지주",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "017940": {
+    "name": "E1",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "093320": {
+    "name": "케이아이엔엑스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "309710": {
+    "name": "아이티켐",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "016590": {
+    "name": "신대양제지",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "119850": {
+    "name": "지엔씨에너지",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "044490": {
+    "name": "태웅",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "033100": {
+    "name": "제룡전기",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "003545": {
+    "name": "대신증권우",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "016380": {
+    "name": "KG스틸",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "016800": {
+    "name": "퍼시스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "029530": {
+    "name": "신도리코",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "100790": {
+    "name": "미래에셋벤처투자",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "005810": {
+    "name": "풍산홀딩스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "004690": {
+    "name": "삼천리",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "003300": {
+    "name": "한일홀딩스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "038500": {
+    "name": "삼표시멘트",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "097520": {
+    "name": "엠씨넥스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "455900": {
+    "name": "엔젤로보틱스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "005610": {
+    "name": "SPC삼립",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "009900": {
+    "name": "명신산업",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "059090": {
+    "name": "미코",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "005389": {
+    "name": "현대차3우B",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "092200": {
+    "name": "디아이씨",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "183190": {
+    "name": "아세아시멘트",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "347700": {
+    "name": "스피어",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "014830": {
+    "name": "유니드",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "033790": {
+    "name": "피노",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "475400": {
+    "name": "씨메스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "460860": {
+    "name": "동국제강",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "105840": {
+    "name": "우진",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "079940": {
+    "name": "가비아",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "084010": {
+    "name": "대한제강",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "304100": {
+    "name": "솔트룩스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "015360": {
+    "name": "INVENI",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "027410": {
+    "name": "BGF",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "338840": {
+    "name": "와이바이오로직스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "117730": {
+    "name": "티로보틱스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "098070": {
+    "name": "한텍",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "403550": {
+    "name": "쏘카",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "031330": {
+    "name": "에스에이엠티",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "441270": {
+    "name": "파인엠텍",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "348340": {
+    "name": "뉴로메카",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "295310": {
+    "name": "에이치브이엠",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "035890": {
+    "name": "서희건설",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "034120": {
+    "name": "SBS",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "005945": {
+    "name": "NH투자증권우",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "065660": {
+    "name": "안트로젠",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "003800": {
+    "name": "에이스침대",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "126560": {
+    "name": "현대퓨처넷",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "448900": {
+    "name": "한국피아이엠",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "389260": {
+    "name": "대명에너지",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "011930": {
+    "name": "신성이엔지",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "092230": {
+    "name": "KPX홀딩스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "126720": {
+    "name": "수산인더스트리",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "009680": {
+    "name": "모토닉",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "459510": {
+    "name": "나우로보틱스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "123890": {
+    "name": "한국자산신탁",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "002320": {
+    "name": "한진",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "092460": {
+    "name": "한라IMS",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "003120": {
+    "name": "일성아이에스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "035810": {
+    "name": "이지홀딩스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "036890": {
+    "name": "진성티이씨",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "286940": {
+    "name": "롯데이노베이트",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "000050": {
+    "name": "경방",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "481070": {
+    "name": "에이유브랜즈",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "007690": {
+    "name": "국도화학",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "002900": {
+    "name": "TYM",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "006340": {
+    "name": "대원전선",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "018310": {
+    "name": "삼목에스폼",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "004360": {
+    "name": "세방",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "462860": {
+    "name": "더즌",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "452430": {
+    "name": "사피엔반도체",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "027360": {
+    "name": "아주IB투자",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "151860": {
+    "name": "KG에코솔루션",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "299030": {
+    "name": "하나기술",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "018000": {
+    "name": "유니슨",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "006910": {
+    "name": "보성파워텍",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "023410": {
+    "name": "유진기업",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "255220": {
+    "name": "SG",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "368770": {
+    "name": "파이버프로",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "290690": {
+    "name": "소룩스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "236200": {
+    "name": "슈프리마",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "108670": {
+    "name": "LX하우시스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "034810": {
+    "name": "해성산업",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "078020": {
+    "name": "LS증권",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "122900": {
+    "name": "아이마켓코리아",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "000490": {
+    "name": "대동",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "000680": {
+    "name": "LS네트웍스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "182400": {
+    "name": "엔케이맥스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "013120": {
+    "name": "동원개발",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "484810": {
+    "name": "티엑스알로보틱스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "270660": {
+    "name": "에브리봇",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "001130": {
+    "name": "대한제분",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "121800": {
+    "name": "비덴트",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "025000": {
+    "name": "KPX케미칼",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "150840": {
+    "name": "인트로메딕",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "037710": {
+    "name": "광주신세계",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "043370": {
+    "name": "피에이치에이",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "007570": {
+    "name": "일양약품",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "001750": {
+    "name": "한양증권",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "042370": {
+    "name": "비츠로테크",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "000480": {
+    "name": "CR홀딩스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "058430": {
+    "name": "포스코스틸리온",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "121440": {
+    "name": "골프존홀딩스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "190510": {
+    "name": "나무가",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "208340": {
+    "name": "파멥신",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "003610": {
+    "name": "방림",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "037460": {
+    "name": "삼지전자",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "02826K": {
+    "name": "삼성물산우B",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "234340": {
+    "name": "헥토파이낸셜",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "068930": {
+    "name": "디지털대성",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "039570": {
+    "name": "HDC랩스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "092130": {
+    "name": "이크레더블",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "214180": {
+    "name": "헥토이노베이션",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "057880": {
+    "name": "푸른소나무",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "005680": {
+    "name": "삼영전자",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "353810": {
+    "name": "이지바이오",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "060150": {
+    "name": "인선이엔티",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "457550": {
+    "name": "우진엔텍",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "001045": {
+    "name": "CJ우",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "014280": {
+    "name": "금강공업",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "134380": {
+    "name": "미원화학",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "004380": {
+    "name": "삼익THK",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "080580": {
+    "name": "오킨스전자",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "456010": {
+    "name": "아이씨티케이",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "003547": {
+    "name": "대신증권2우B",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "293480": {
+    "name": "하나제약",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "264850": {
+    "name": "이랜시스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "091580": {
+    "name": "상신이디피",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "003650": {
+    "name": "미창석유",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "400760": {
+    "name": "NH올원리츠",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "143160": {
+    "name": "아이디스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "033160": {
+    "name": "엠케이전자",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "340450": {
+    "name": "지씨지놈",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "016790": {
+    "name": "현대사료",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "011040": {
+    "name": "경동제약",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "015230": {
+    "name": "대창단조",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "037560": {
+    "name": "LG헬로비전",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "314130": {
+    "name": "지놈앤컴퍼니",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "002100": {
+    "name": "경농",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "297090": {
+    "name": "씨에스베어링",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "460940": {
+    "name": "피앤에스로보틱스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "094820": {
+    "name": "일진파워",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "084670": {
+    "name": "동양고속",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "090350": {
+    "name": "노루페인트",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "025820": {
+    "name": "이구산업",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "463020": {
+    "name": "뉴엔AI",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "215100": {
+    "name": "로보로보",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "041920": {
+    "name": "메디아나",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "462520": {
+    "name": "조선내화",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "158430": {
+    "name": "아톤",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "096250": {
+    "name": "와이즈넛",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "002170": {
+    "name": "삼양통상",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "004560": {
+    "name": "현대비앤지스틸",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "211270": {
+    "name": "AP위성",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "214680": {
+    "name": "디알텍",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "000300": {
+    "name": "DH오토넥스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "083420": {
+    "name": "그린케미칼",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "070960": {
+    "name": "모나용평",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "007330": {
+    "name": "푸른저축은행",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "003460": {
+    "name": "유화증권",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "000700": {
+    "name": "유수홀딩스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "217730": {
+    "name": "강스템바이오텍",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "066410": {
+    "name": "버킷스튜디오",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "003830": {
+    "name": "대한화섬",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "143240": {
+    "name": "사람인",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "046070": {
+    "name": "코다코",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "052330": {
+    "name": "코텍",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "008110": {
+    "name": "대동전자",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "322180": {
+    "name": "LS티라유텍",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "388050": {
+    "name": "지투파워",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "037070": {
+    "name": "파세코",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "086980": {
+    "name": "쇼박스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "109610": {
+    "name": "에스와이",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "089600": {
+    "name": "KT나스미디어",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "210540": {
+    "name": "디와이파워",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "068790": {
+    "name": "DMS",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "094280": {
+    "name": "효성ITX",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "021080": {
+    "name": "에이티넘인베스트",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "298000": {
+    "name": "효성화학",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "004970": {
+    "name": "신라교역",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "052420": {
+    "name": "오성첨단소재",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "322510": {
+    "name": "제이엘케이",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "226590": {
+    "name": "엠디바이스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "223250": {
+    "name": "드림씨아이에스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "016710": {
+    "name": "대성홀딩스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "096240": {
+    "name": "크레버스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "071200": {
+    "name": "인피니트헬스케어",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "274090": {
+    "name": "켄코아에어로스페이스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "264450": {
+    "name": "유비쿼스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "366030": {
+    "name": "공구우먼",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "474170": {
+    "name": "루미르",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "072870": {
+    "name": "메가스터디",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "030960": {
+    "name": "양지사",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "033180": {
+    "name": "KH 필룩스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "019440": {
+    "name": "세아특수강",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "140670": {
+    "name": "알에스오토메이션",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "002460": {
+    "name": "HS화성",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "077500": {
+    "name": "유니퀘스트",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "014580": {
+    "name": "태경비케이",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "004960": {
+    "name": "한신공영",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "219130": {
+    "name": "타이거일렉",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "004140": {
+    "name": "동방",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "085670": {
+    "name": "뉴프렉스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "269620": {
+    "name": "시스웍",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "007110": {
+    "name": "일신석재",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "004080": {
+    "name": "신흥",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "451760": {
+    "name": "컨텍",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "361390": {
+    "name": "제노코",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "309960": {
+    "name": "LB인베스트먼트",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "002230": {
+    "name": "피에스텍",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "125020": {
+    "name": "티씨머티리얼즈",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "443250": {
+    "name": "레뷰코퍼레이션",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "348150": {
+    "name": "고바이오랩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "015590": {
+    "name": "DKME",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "090850": {
+    "name": "현대이지웰",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "083790": {
+    "name": "CG인바이츠",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "048550": {
+    "name": "SM C&C",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "100130": {
+    "name": "동국S&C",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "014530": {
+    "name": "극동유화",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "014160": {
+    "name": "대영포장",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "010660": {
+    "name": "화천기계",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "041590": {
+    "name": "플래스크",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "013310": {
+    "name": "아진산업",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "034590": {
+    "name": "인천도시가스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "348080": {
+    "name": "큐라티스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "024880": {
+    "name": "케이피에프",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "046120": {
+    "name": "오르비텍",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "017550": {
+    "name": "수산세보틱스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "227840": {
+    "name": "현대코퍼레이션홀딩스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "03473K": {
+    "name": "SK우",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "002450": {
+    "name": "삼익악기",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "019550": {
+    "name": "SBI인베스트먼트",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "000180": {
+    "name": "성창기업지주",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "016740": {
+    "name": "두올",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "209640": {
+    "name": "와이제이링크",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "005870": {
+    "name": "휴니드",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "011810": {
+    "name": "STX",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "389030": {
+    "name": "지니너스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "002780": {
+    "name": "진흥기업",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "044340": {
+    "name": "위닉스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "228670": {
+    "name": "레이",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "093920": {
+    "name": "서원인텍",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "009300": {
+    "name": "삼아제약",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "042510": {
+    "name": "라온시큐어",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "299170": {
+    "name": "더블유에스아이",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "011700": {
+    "name": "한신기계",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "008260": {
+    "name": "NI스틸",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "037350": {
+    "name": "성도이엔지",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "417010": {
+    "name": "나노팀",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "183490": {
+    "name": "엔지켐생명과학",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "066790": {
+    "name": "씨씨에스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "058860": {
+    "name": "KTis",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "446840": {
+    "name": "지슨",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "004890": {
+    "name": "동일산업",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "053280": {
+    "name": "예스24",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "002700": {
+    "name": "신일전자",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "307930": {
+    "name": "컴퍼니케이",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "900250": {
+    "name": "크리스탈신소재",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "149980": {
+    "name": "하이로닉",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "011320": {
+    "name": "유니크",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "003780": {
+    "name": "진양산업",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "004100": {
+    "name": "태양금속",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "173130": {
+    "name": "오파스넷",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "053700": {
+    "name": "삼보모터스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "453860": {
+    "name": "에이에스텍",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "289080": {
+    "name": "SV인베스트먼트",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "111710": {
+    "name": "남화산업",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "025550": {
+    "name": "한국선재",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "339950": {
+    "name": "아이비김영",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "084730": {
+    "name": "팅크웨어",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "225190": {
+    "name": "LK삼양",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "001380": {
+    "name": "SG글로벌",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "396270": {
+    "name": "넥스트칩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "307180": {
+    "name": "아이엘",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "007820": {
+    "name": "에스엠코어",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "010040": {
+    "name": "한국내화",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "009200": {
+    "name": "무림페이퍼",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "027830": {
+    "name": "대성창투",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "290740": {
+    "name": "액트로",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "011390": {
+    "name": "부산산업",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "382480": {
+    "name": "지아이텍",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "412540": {
+    "name": "제일엠앤에스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "111110": {
+    "name": "호전실업",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "222110": {
+    "name": "팬젠",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "001470": {
+    "name": "삼부토건",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "222160": {
+    "name": "NPX",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "038460": {
+    "name": "바이오스마트",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "053260": {
+    "name": "금강철강",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "032540": {
+    "name": "TJ미디어",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "003560": {
+    "name": "IHQ",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "203690": {
+    "name": "아크솔루션스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "039010": {
+    "name": "현대에이치티",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "351330": {
+    "name": "이삭엔지니어링",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "004590": {
+    "name": "한국가구",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "137950": {
+    "name": "제이씨케미칼",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "043650": {
+    "name": "국순당",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "263600": {
+    "name": "덕우전자",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "000220": {
+    "name": "유유제약",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "435570": {
+    "name": "에르코스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "364950": {
+    "name": "에이아이코리아",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "101330": {
+    "name": "모베이스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "451220": {
+    "name": "아이엠티",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "234920": {
+    "name": "자이글",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "355390": {
+    "name": "크라우드웍스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "052790": {
+    "name": "액토즈소프트",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "128660": {
+    "name": "피제이메탈",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "471820": {
+    "name": "셀로맥스사이언스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "073640": {
+    "name": "테라사이언스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "094840": {
+    "name": "슈프리마에이치큐",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "226360": {
+    "name": "KH 건설",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "352700": {
+    "name": "씨앤투스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "006370": {
+    "name": "대구백화점",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "332370": {
+    "name": "아이디피",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "075180": {
+    "name": "새론오토모티브",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "015710": {
+    "name": "코콤",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "040610": {
+    "name": "SG&G",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "378850": {
+    "name": "화승알앤에이",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "004910": {
+    "name": "조광페인트",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "046940": {
+    "name": "우원개발",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "111870": {
+    "name": "KH 미래물산",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "440290": {
+    "name": "HB인베스트먼트",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "000725": {
+    "name": "현대건설우",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "052670": {
+    "name": "제일바이오",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "024840": {
+    "name": "KBI메탈",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "900260": {
+    "name": "로스웰",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "032960": {
+    "name": "동일기연",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "053270": {
+    "name": "구영테크",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "024940": {
+    "name": "PN풍년",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "066130": {
+    "name": "하츠",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "051490": {
+    "name": "나라엠앤디",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "099520": {
+    "name": "DGI",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "025530": {
+    "name": "SJM홀딩스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "003310": {
+    "name": "대주산업",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "245620": {
+    "name": "EDGC",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "046970": {
+    "name": "우리로",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "024950": {
+    "name": "삼천리자전거",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "474610": {
+    "name": "RF시스템즈",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "053620": {
+    "name": "태양",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "002920": {
+    "name": "유성기업",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "012160": {
+    "name": "영흥",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "069730": {
+    "name": "DSR제강",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "217480": {
+    "name": "에스디생명공학",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "023350": {
+    "name": "한국종합기술",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "007610": {
+    "name": "선도전기",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "036180": {
+    "name": "지더블유바이텍",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "046310": {
+    "name": "백금T&A",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "002410": {
+    "name": "범양건영",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "178780": {
+    "name": "일월지엠엘",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "021880": {
+    "name": "메이슨캐피탈",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "049830": {
+    "name": "승일",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "294090": {
+    "name": "이오플로우",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "096610": {
+    "name": "알에프세미",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "039290": {
+    "name": "인포뱅크",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "021050": {
+    "name": "서원",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "200780": {
+    "name": "비씨월드제약",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "010600": {
+    "name": "웰바이오텍",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "37550K": {
+    "name": "DL이앤씨우",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "273060": {
+    "name": "와이즈버즈",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "357430": {
+    "name": "마스턴프리미어리츠",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "012280": {
+    "name": "영화금속",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "003465": {
+    "name": "유화증권우",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "122350": {
+    "name": "삼기",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "122690": {
+    "name": "서진오토모티브",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "082660": {
+    "name": "코스나인",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "208860": {
+    "name": "다산디엠씨",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "014570": {
+    "name": "고려제약",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "023960": {
+    "name": "에쓰씨엔지니어링",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "140520": {
+    "name": "대창스틸",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "020760": {
+    "name": "일진디스플",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "204020": {
+    "name": "그리티",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "418250": {
+    "name": "시큐레터",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "038620": {
+    "name": "위즈코프",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "123010": {
+    "name": "아이윈플러스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "104200": {
+    "name": "NHN벅스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "006050": {
+    "name": "국영지앤엠",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "016600": {
+    "name": "큐캐피탈",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "019770": {
+    "name": "서연탑메탈",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "406820": {
+    "name": "뷰티스킨",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "075970": {
+    "name": "동국알앤에스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "033540": {
+    "name": "파라텍",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "008420": {
+    "name": "문배철강",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "079000": {
+    "name": "와토스코리아",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "048770": {
+    "name": "TPC",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "019490": {
+    "name": "엑시큐어하이트론",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "188040": {
+    "name": "바이오포트",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "024120": {
+    "name": "KB오토시스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "022220": {
+    "name": "티케이지애강",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "119500": {
+    "name": "포메탈",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "049800": {
+    "name": "우진플라임",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "005030": {
+    "name": "부산주공",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "021650": {
+    "name": "한국큐빅",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "306040": {
+    "name": "에스제이그룹",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "900310": {
+    "name": "컬러레이",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "074610": {
+    "name": "이엔플러스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "276040": {
+    "name": "스코넥",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "222980": {
+    "name": "한국맥널티",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "398120": {
+    "name": "에스지헬스케어",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "012620": {
+    "name": "원일특강",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "068940": {
+    "name": "셀피글로벌",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "066360": {
+    "name": "체리부로",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "089140": {
+    "name": "넥스턴앤롤코리아",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "004365": {
+    "name": "세방우",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "001070": {
+    "name": "대한방직",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "001140": {
+    "name": "국보",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "290560": {
+    "name": "신시웨이",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "004270": {
+    "name": "남성",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "090150": {
+    "name": "아이윈",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "009460": {
+    "name": "한창제지",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "032680": {
+    "name": "소프트센",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "131090": {
+    "name": "시큐브",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "451700": {
+    "name": "엔에이치스팩29호",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "070300": {
+    "name": "엑스큐어",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "246250": {
+    "name": "에스엘에스바이오",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "240600": {
+    "name": "유진테크놀로지",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "002025": {
+    "name": "코오롱우",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "331520": {
+    "name": "밸로프",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "187220": {
+    "name": "디티앤씨",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "101000": {
+    "name": "KS인더스트리",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "317240": {
+    "name": "TS트릴리온",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "065650": {
+    "name": "하이퍼코퍼레이션",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "258830": {
+    "name": "세종메디칼",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "217620": {
+    "name": "선샤인푸드",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "464680": {
+    "name": "KB제27호스팩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "067730": {
+    "name": "로지시스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "193250": {
+    "name": "링크드",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "089230": {
+    "name": "THE E&M",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "005110": {
+    "name": "한창",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "347770": {
+    "name": "핌스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "405000": {
+    "name": "플라즈맵",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "192390": {
+    "name": "윈하이텍",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "002210": {
+    "name": "동성제약",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "900100": {
+    "name": "애머릿지",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "204630": {
+    "name": "스튜디오산타클로스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "139050": {
+    "name": "BF랩스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "005257": {
+    "name": "녹십자홀딩스2우",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "448760": {
+    "name": "IBKS제22호스팩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "002355": {
+    "name": "넥센타이어1우B",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "019685": {
+    "name": "대교우B",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "196700": {
+    "name": "웹스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "002680": {
+    "name": "한탑",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "065150": {
+    "name": "대산F&B",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "001685": {
+    "name": "대상우",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "050760": {
+    "name": "에스폴리텍",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "053060": {
+    "name": "세동",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "008500": {
+    "name": "일정실업",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "080720": {
+    "name": "한국유니온제약",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "230980": {
+    "name": "비유테크놀러지",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "130740": {
+    "name": "티피씨글로벌",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "18064K": {
+    "name": "한진칼우",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "020400": {
+    "name": "대동금속",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "466910": {
+    "name": "엔에이치스팩30호",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "032980": {
+    "name": "바이온",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "009440": {
+    "name": "KC그린홀딩스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "060480": {
+    "name": "국일신동",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "000087": {
+    "name": "하이트진로2우B",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "241820": {
+    "name": "피씨엘",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "001795": {
+    "name": "대한제당우",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "106520": {
+    "name": "노블엠앤비",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "457630": {
+    "name": "대신밸런스제16호스팩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "227100": {
+    "name": "퀀텀온",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "052770": {
+    "name": "아이톡시",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "473050": {
+    "name": "유안타제15호스팩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "145995": {
+    "name": "삼양사우",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "140910": {
+    "name": "에이리츠",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "352770": {
+    "name": "셀레스트라",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "030350": {
+    "name": "드래곤플라이",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "471050": {
+    "name": "대신밸런스제17호스팩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "004255": {
+    "name": "NPC우",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "001067": {
+    "name": "JW중외제약2우B",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "03481K": {
+    "name": "해성산업1우",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "054180": {
+    "name": "메디콕스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "054630": {
+    "name": "에이디칩스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "482520": {
+    "name": "교보16호스팩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "0037T0": {
+    "name": "KB제32호스팩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "065570": {
+    "name": "삼영이엔씨",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "474660": {
+    "name": "신한제12호스팩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "174880": {
+    "name": "장원테크",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "060240": {
+    "name": "스타코링크",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "477470": {
+    "name": "미래에셋비전스팩5호",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "496070": {
+    "name": "신한제16호스팩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "489210": {
+    "name": "교보17호스팩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "474490": {
+    "name": "유안타제16호스팩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "446150": {
+    "name": "유안타제12호스팩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "486630": {
+    "name": "KB제30호스팩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "0004Y0": {
+    "name": "디비금융제14호스팩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "244460": {
+    "name": "올리패스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "478110": {
+    "name": "이베스트스팩6호",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "455910": {
+    "name": "에스케이증권제9호스팩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "079950": {
+    "name": "인베니아",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "006345": {
+    "name": "대원전선우",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "467930": {
+    "name": "IBKS제23호스팩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "469480": {
+    "name": "IBKS제24호스팩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "465320": {
+    "name": "교보15호스팩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "487830": {
+    "name": "신한제15호스팩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "456490": {
+    "name": "교보14호스팩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "001515": {
+    "name": "SK증권우",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "475250": {
+    "name": "하나33호스팩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "473370": {
+    "name": "비엔케이제2호스팩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "472230": {
+    "name": "에스케이증권제11호스팩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "26490K": {
+    "name": "크라운제과우",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "457940": {
+    "name": "에스케이증권제10호스팩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "473000": {
+    "name": "에스케이증권제12호스팩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "079970": {
+    "name": "투비소프트",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "475240": {
+    "name": "하나32호스팩",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "007575": {
+    "name": "일양약품우",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "043090": {
+    "name": "더테크놀로지",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "101390": {
+    "name": "아이엠",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "000227": {
+    "name": "유유제약2우B",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "395400": {
+    "name": "SK리츠",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "032190": {
+    "name": "다우데이타",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "052400": {
+    "name": "코나아이",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "228760": {
+    "name": "지노믹트리",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "041960": {
+    "name": "코미팜",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "189300": {
+    "name": "인텔리안테크",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "058650": {
+    "name": "세아홀딩스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "016610": {
+    "name": "DB증권",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "128820": {
+    "name": "대성산업",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "043260": {
+    "name": "성호전자",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "357550": {
+    "name": "석경에이티",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "025860": {
+    "name": "남해화학",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "017390": {
+    "name": "서울가스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "417310": {
+    "name": "코람코더원리츠",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "003200": {
+    "name": "일신방직",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "474650": {
+    "name": "링크솔루션",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "377460": {
+    "name": "위니아에이드",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "067390": {
+    "name": "아스트",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "001230": {
+    "name": "동국홀딩스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "054210": {
+    "name": "이랜텍",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "095570": {
+    "name": "AJ네트웍스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "009070": {
+    "name": "KCTC",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "053690": {
+    "name": "한미글로벌",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "038390": {
+    "name": "레드캡투어",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "001250": {
+    "name": "GS글로벌",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "217820": {
+    "name": "원익피앤이",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "405100": {
+    "name": "큐알티",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "023910": {
+    "name": "대한약품",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "138080": {
+    "name": "오이솔루션",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "337930": {
+    "name": "젝시믹스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "023600": {
+    "name": "삼보판지",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "205100": {
+    "name": "엑셈",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "101170": {
+    "name": "우림피티에스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "003100": {
+    "name": "선광",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "354320": {
+    "name": "알멕",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "058850": {
+    "name": "KTcs",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "147830": {
+    "name": "제룡산업",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "033290": {
+    "name": "코웰패션",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "059270": {
+    "name": "해성에어로보틱스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "041930": {
+    "name": "동아화성",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "082850": {
+    "name": "우리바이오",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "023800": {
+    "name": "인지컨트롤스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "119650": {
+    "name": "KC코트렐",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "452400": {
+    "name": "이닉스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "036640": {
+    "name": "HRS",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "007590": {
+    "name": "동방아그로",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "159580": {
+    "name": "제로투세븐",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "175250": {
+    "name": "아이큐어",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "013870": {
+    "name": "지엠비코리아",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "039240": {
+    "name": "경남스틸",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "019990": {
+    "name": "에너토크",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "120115": {
+    "name": "코오롱인더우",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "004410": {
+    "name": "서울식품",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "322780": {
+    "name": "코퍼스코리아",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "173940": {
+    "name": "에프엔씨엔터",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "001620": {
+    "name": "케이비아이동국실업",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "109080": {
+    "name": "옵티시스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "256150": {
+    "name": "한독크린텍",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "066910": {
+    "name": "손오공",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "126640": {
+    "name": "화신정공",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "353590": {
+    "name": "오토앤",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "130500": {
+    "name": "GH신소재",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "446070": {
+    "name": "유니드비티플러스",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "196450": {
+    "name": "코아시아씨엠",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "284620": {
+    "name": "카이노스메드",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "013000": {
+    "name": "세우글로벌",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "009140": {
+    "name": "경인전자",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "900110": {
+    "name": "이스트아시아홀딩스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "047080": {
+    "name": "한빛소프트",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "257370": {
+    "name": "피엔티엠에스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "054940": {
+    "name": "엑사이엔씨",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "001770": {
+    "name": "SHD",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "067770": {
+    "name": "세진티에스",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "900120": {
+    "name": "씨엑스아이",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "482680": {
+    "name": "미래에셋비전스팩7호",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
+  },
+  "204210": {
+    "name": "스타에스엠리츠",
+    "market": "KOSPI",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "A"
+  },
+  "032685": {
+    "name": "소프트센우",
+    "market": "KOSDAQ",
+    "first_detected": "2025-12-12",
+    "last_detected": "2025-12-12",
+    "grade": "B"
   }
 }
